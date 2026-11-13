@@ -32,6 +32,7 @@ import java.util.Locale;
 import junit.framework.TestCase;
 import net.sf.freecol.FreeCol;
 import net.sf.freecol.common.i18n.Messages;
+import net.sf.freecol.common.io.FreeColDirectories;
 import net.sf.freecol.common.io.FreeColModFile;
 import net.sf.freecol.common.io.FreeColRules;
 import net.sf.freecol.common.model.AbstractGoods;
@@ -140,6 +141,10 @@ public class FreeColTestCase extends TestCase {
     public static Specification getSpecification(String name) {
         Specification result = specifications.get(name);
         if (result == null) {
+            if (!FreeColDirectories.getDataDirectory().isDirectory()
+                    && new java.io.File("../data").isDirectory()) {
+                FreeColDirectories.setDataDirectory("../data");
+            }
             FreeColRules.loadRules();
             try {
                 FreeColModFile rules = FreeColRules.getFreeColRulesFile(name);

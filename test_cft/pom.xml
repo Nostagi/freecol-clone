@@ -29,6 +29,8 @@
     <junit.version>4.13.2</junit.version>
     <!-- Used by jacoco prepare-agent when surefire has no explicit value -->
     <argLine></argLine>
+    <!-- Default JVM for surefire; scripts/*.cmd may override -Dsurefire.jvm=... when JAVA_HOME contains parentheses -->
+    <surefire.jvm>${java.home}/bin/java</surefire.jvm>
   </properties>
 
   <dependencies>
@@ -101,15 +103,9 @@
             <goals><goal>report</goal></goals>
             <configuration>
               <outputDirectory>${project.basedir}/reports/jacoco</outputDirectory>
-              <!-- High-priority scope only (kept in sync with config/high_priority_packages.txt) -->
+              <!-- Report all classes matching the source tree in ../src (no high-priority module filtering) -->
               <includes>
-                <include>net/sf/freecol/FreeCol*.class</include>
-                <include>net/sf/freecol/client/control/**</include>
-                <include>net/sf/freecol/common/model/**</include>
-                <include>net/sf/freecol/common/util/**</include>
-                <include>net/sf/freecol/server/ai/**</include>
-                <include>net/sf/freecol/server/control/**</include>
-                <include>net/sf/freecol/server/model/**</include>
+                <include>net/sf/freecol/**</include>
               </includes>
             </configuration>
           </execution>
@@ -121,6 +117,7 @@
         <artifactId>maven-surefire-plugin</artifactId>
         <version>3.2.5</version>
         <configuration>
+          <jvm>${surefire.jvm}</jvm>
           <!-- FreeCol resolves "data/..." and "test/data/..." relative to the repository root -->
           <workingDirectory>${repo.root}</workingDirectory>
           <argLine>@{argLine} -Djava.awt.headless=true</argLine>
