@@ -1,0 +1,10 @@
+# High-priority class roots (relative to build/classes). JaCoCo --classfiles recurses into sub-packages,
+# so sub-packages (common/model/mission, server/ai/colony, ...) are already included by their parent.
+net/sf/freecol/client/control
+net/sf/freecol/common/model
+net/sf/freecol/common/util
+net/sf/freecol/server/ai
+net/sf/freecol/server/control
+net/sf/freecol/server/model
+# Root package: ONLY FreeCol.class and its inner classes (FreeCol$*.class). Do NOT pass the whole net/sf/freecol directory.
+net/sf/freecol/FreeCol.class

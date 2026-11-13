@@ -1,0 +1,786 @@
+package,file,class_name,public_methods,loc,priority,rationale
+(root),net/sf/freecol/FreeCol.java,FreeCol,43,1727,High,Application entry point
+client,net/sf/freecol/client/ClientOptions.java,ClientOptions,13,1056,Medium,"Client bootstrap (FreeColClient, ClientOptions)"
+client,net/sf/freecol/client/FreeColClient.java,FreeColClient,49,1058,Medium,"Client bootstrap (FreeColClient, ClientOptions)"
+client/control,net/sf/freecol/client/control/ClientInputHandler.java,ClientInputHandler,2,64,High,"Client-side controllers, command dispatch"
+client/control,net/sf/freecol/client/control/ConnectController.java,ConnectController,10,592,High,"Client-side controllers, command dispatch"
+client/control,net/sf/freecol/client/control/FreeColClientHolder.java,FreeColClientHolder,1,171,High,"Client-side controllers, command dispatch"
+client/control,net/sf/freecol/client/control/InGameController.java,InGameController,96,5366,High,"Client-side controllers, command dispatch"
+client/control,net/sf/freecol/client/control/MapEditorController.java,MapEditorController,18,406,High,"Client-side controllers, command dispatch"
+client/control,net/sf/freecol/client/control/MapEditorTool.java,MapEditorTool,1,42,High,"Client-side controllers, command dispatch"
+client/control,net/sf/freecol/client/control/MapTransform.java,MapTransform,3,69,High,"Client-side controllers, command dispatch"
+client/control,net/sf/freecol/client/control/PreGameController.java,PreGameController,22,393,High,"Client-side controllers, command dispatch"
+client/control,net/sf/freecol/client/control/SoundController.java,SoundController,5,157,High,"Client-side controllers, command dispatch"
+client/gui,net/sf/freecol/client/gui/Canvas.java,Canvas,58,1877,Low,UI / Swing components (integration-tested)
+client/gui,net/sf/freecol/client/gui/CanvasMapEditorMouseListener.java,CanvasMapEditorMouseListener,7,249,Low,UI / Swing components (integration-tested)
+client/gui,net/sf/freecol/client/gui/CanvasMouseListener.java,CanvasMouseListener,5,121,Low,UI / Swing components (integration-tested)
+client/gui,net/sf/freecol/client/gui/CanvasMouseMotionListener.java,CanvasMouseMotionListener,2,74,Low,UI / Swing components (integration-tested)
+client/gui,net/sf/freecol/client/gui/ChoiceItem.java,ChoiceItem,16,262,Low,UI / Swing components (integration-tested)
+client/gui,net/sf/freecol/client/gui/DialogHandler.java,DialogHandler,0,35,Low,UI / Swing components (integration-tested)
+client/gui,net/sf/freecol/client/gui/FontLibrary.java,FontLibrary,10,276,Low,UI / Swing components (integration-tested)
+client/gui,net/sf/freecol/client/gui/FrameMotionListener.java,FrameMotionListener,3,98,Low,UI / Swing components (integration-tested)
+client/gui,net/sf/freecol/client/gui/FreeColFrame.java,FreeColFrame,5,199,Low,UI / Swing components (integration-tested)
+client/gui,net/sf/freecol/client/gui/FullScreenFrameListener.java,FullScreenFrameListener,7,125,Low,UI / Swing components (integration-tested)
+client/gui,net/sf/freecol/client/gui/GUI.java,GUI,213,2648,Low,UI / Swing components (integration-tested)
+client/gui,net/sf/freecol/client/gui/GrayLayer.java,GrayLayer,2,166,Low,UI / Swing components (integration-tested)
+client/gui,net/sf/freecol/client/gui/ImageLibrary.java,ImageLibrary,156,2146,Low,UI / Swing components (integration-tested)
+client/gui,net/sf/freecol/client/gui/LoadingSavegameInfo.java,LoadingSavegameInfo,5,87,Low,UI / Swing components (integration-tested)
+client/gui,net/sf/freecol/client/gui/ModifierFormat.java,ModifierFormat,5,130,Low,UI / Swing components (integration-tested)
+client/gui,net/sf/freecol/client/gui/ScrollThread.java,ScrollThread,4,132,Low,UI / Swing components (integration-tested)
+client/gui,net/sf/freecol/client/gui/Scrolling.java,Scrolling,3,167,Low,UI / Swing components (integration-tested)
+client/gui,net/sf/freecol/client/gui/Size.java,Size,5,69,Low,UI / Swing components (integration-tested)
+client/gui,net/sf/freecol/client/gui/SplashScreen.java,SplashScreen,0,62,Low,UI / Swing components (integration-tested)
+client/gui,net/sf/freecol/client/gui/SwingGUI.java,SwingGUI,179,2883,Low,UI / Swing components (integration-tested)
+client/gui,net/sf/freecol/client/gui/TilePopup.java,TilePopup,1,511,Low,UI / Swing components (integration-tested)
+client/gui,net/sf/freecol/client/gui/Widgets.java,Widgets,82,1530,Low,UI / Swing components (integration-tested)
+client/gui,net/sf/freecol/client/gui/WindowedFrameListener.java,WindowedFrameListener,7,113,Low,UI / Swing components (integration-tested)
+client/gui/action,net/sf/freecol/client/gui/action/AboutAction.java,AboutAction,1,54,Low,UI / Swing components (integration-tested)
+client/gui/action,net/sf/freecol/client/gui/action/ActionManager.java,ActionManager,8,288,Low,UI / Swing components (integration-tested)
+client/gui/action,net/sf/freecol/client/gui/action/AssignTradeRouteAction.java,AssignTradeRouteAction,1,71,Low,UI / Swing components (integration-tested)
+client/gui/action,net/sf/freecol/client/gui/action/AttackRangedAction.java,AttackRangedAction,1,72,Low,UI / Swing components (integration-tested)
+client/gui/action,net/sf/freecol/client/gui/action/BuildColonyAction.java,BuildColonyAction,1,74,Low,UI / Swing components (integration-tested)
+client/gui/action,net/sf/freecol/client/gui/action/CenterAction.java,CenterAction,1,62,Low,UI / Swing components (integration-tested)
+client/gui/action,net/sf/freecol/client/gui/action/ChangeAction.java,ChangeAction,2,117,Low,UI / Swing components (integration-tested)
+client/gui/action,net/sf/freecol/client/gui/action/ChangeWindowedModeAction.java,ChangeWindowedModeAction,1,57,Low,UI / Swing components (integration-tested)
+client/gui/action,net/sf/freecol/client/gui/action/ChatAction.java,ChatAction,1,70,Low,UI / Swing components (integration-tested)
+client/gui/action,net/sf/freecol/client/gui/action/ClearOrdersAction.java,ClearOrdersAction,1,54,Low,UI / Swing components (integration-tested)
+client/gui/action,net/sf/freecol/client/gui/action/ColopediaAction.java,ColopediaAction,2,82,Low,UI / Swing components (integration-tested)
+client/gui/action,net/sf/freecol/client/gui/action/ContinueAction.java,ContinueAction,1,71,Low,UI / Swing components (integration-tested)
+client/gui/action,net/sf/freecol/client/gui/action/DebugAction.java,DebugAction,2,74,Low,UI / Swing components (integration-tested)
+client/gui/action,net/sf/freecol/client/gui/action/DeclareIndependenceAction.java,DeclareIndependenceAction,1,69,Low,UI / Swing components (integration-tested)
+client/gui/action,net/sf/freecol/client/gui/action/DetermineHighSeasAction.java,DetermineHighSeasAction,1,74,Low,UI / Swing components (integration-tested)
+client/gui/action,net/sf/freecol/client/gui/action/DisbandUnitAction.java,DisbandUnitAction,1,56,Low,UI / Swing components (integration-tested)
+client/gui/action,net/sf/freecol/client/gui/action/DisplayBordersAction.java,DisplayBordersAction,0,44,Low,UI / Swing components (integration-tested)
+client/gui/action,net/sf/freecol/client/gui/action/DisplayFogOfWarAction.java,DisplayFogOfWarAction,0,61,Low,UI / Swing components (integration-tested)
+client/gui/action,net/sf/freecol/client/gui/action/DisplayGridAction.java,DisplayGridAction,0,44,Low,UI / Swing components (integration-tested)
+client/gui/action,net/sf/freecol/client/gui/action/DisplayTileTextAction.java,DisplayTileTextAction,3,101,Low,UI / Swing components (integration-tested)
+client/gui/action,net/sf/freecol/client/gui/action/EndTurnAction.java,EndTurnAction,1,56,Low,UI / Swing components (integration-tested)
+client/gui/action,net/sf/freecol/client/gui/action/EuropeAction.java,EuropeAction,1,68,Low,UI / Swing components (integration-tested)
+client/gui/action,net/sf/freecol/client/gui/action/ExecuteGotoOrdersAction.java,ExecuteGotoOrdersAction,1,54,Low,UI / Swing components (integration-tested)
+client/gui/action,net/sf/freecol/client/gui/action/FindSettlementAction.java,FindSettlementAction,1,54,Low,UI / Swing components (integration-tested)
+client/gui/action,net/sf/freecol/client/gui/action/FortifyAction.java,FortifyAction,1,70,Low,UI / Swing components (integration-tested)
+client/gui/action,net/sf/freecol/client/gui/action/FreeColAction.java,FreeColAction,27,495,Low,UI / Swing components (integration-tested)
+client/gui/action,net/sf/freecol/client/gui/action/GotoAction.java,GotoAction,1,71,Low,UI / Swing components (integration-tested)
+client/gui/action,net/sf/freecol/client/gui/action/GotoTileAction.java,GotoTileAction,1,66,Low,UI / Swing components (integration-tested)
+client/gui/action,net/sf/freecol/client/gui/action/ImprovementAction.java,ImprovementAction,1,84,Low,UI / Swing components (integration-tested)
+client/gui/action,net/sf/freecol/client/gui/action/LoadAction.java,LoadAction,1,88,Low,UI / Swing components (integration-tested)
+client/gui/action,net/sf/freecol/client/gui/action/MapControlsAction.java,MapControlsAction,2,80,Low,UI / Swing components (integration-tested)
+client/gui/action,net/sf/freecol/client/gui/action/MapEditorAction.java,MapEditorAction,1,54,Low,UI / Swing components (integration-tested)
+client/gui/action,net/sf/freecol/client/gui/action/MapEditorToolboxPanelAction.java,MapEditorToolboxPanelAction,1,65,Low,UI / Swing components (integration-tested)
+client/gui/action,net/sf/freecol/client/gui/action/MapEditorTransformPanelAction.java,MapEditorTransformPanelAction,1,65,Low,UI / Swing components (integration-tested)
+client/gui/action,net/sf/freecol/client/gui/action/MapboardAction.java,MapboardAction,0,56,Low,UI / Swing components (integration-tested)
+client/gui/action,net/sf/freecol/client/gui/action/MiniMapToggleFogOfWarAction.java,MiniMapToggleFogOfWarAction,2,85,Low,UI / Swing components (integration-tested)
+client/gui/action,net/sf/freecol/client/gui/action/MiniMapToggleViewAction.java,MiniMapToggleViewAction,2,84,Low,UI / Swing components (integration-tested)
+client/gui/action,net/sf/freecol/client/gui/action/MiniMapZoomInAction.java,MiniMapZoomInAction,1,82,Low,UI / Swing components (integration-tested)
+client/gui/action,net/sf/freecol/client/gui/action/MiniMapZoomOutAction.java,MiniMapZoomOutAction,1,82,Low,UI / Swing components (integration-tested)
+client/gui/action,net/sf/freecol/client/gui/action/MoveAction.java,MoveAction,1,97,Low,UI / Swing components (integration-tested)
+client/gui/action,net/sf/freecol/client/gui/action/NewAction.java,NewAction,1,54,Low,UI / Swing components (integration-tested)
+client/gui/action,net/sf/freecol/client/gui/action/NewEmptyMapAction.java,NewEmptyMapAction,1,86,Low,UI / Swing components (integration-tested)
+client/gui/action,net/sf/freecol/client/gui/action/OpenAction.java,OpenAction,1,58,Low,UI / Swing components (integration-tested)
+client/gui/action,net/sf/freecol/client/gui/action/PreferencesAction.java,PreferencesAction,1,54,Low,UI / Swing components (integration-tested)
+client/gui/action,net/sf/freecol/client/gui/action/QuitAction.java,QuitAction,1,54,Low,UI / Swing components (integration-tested)
+client/gui/action,net/sf/freecol/client/gui/action/ReconnectAction.java,ReconnectAction,1,54,Low,UI / Swing components (integration-tested)
+client/gui/action,net/sf/freecol/client/gui/action/RenameAction.java,RenameAction,1,54,Low,UI / Swing components (integration-tested)
+client/gui/action,net/sf/freecol/client/gui/action/ReportCargoAction.java,ReportCargoAction,1,54,Low,UI / Swing components (integration-tested)
+client/gui/action,net/sf/freecol/client/gui/action/ReportColonyAction.java,ReportColonyAction,1,54,Low,UI / Swing components (integration-tested)
+client/gui/action,net/sf/freecol/client/gui/action/ReportContinentalCongressAction.java,ReportContinentalCongressAction,1,54,Low,UI / Swing components (integration-tested)
+client/gui/action,net/sf/freecol/client/gui/action/ReportEducationAction.java,ReportEducationAction,1,54,Low,UI / Swing components (integration-tested)
+client/gui/action,net/sf/freecol/client/gui/action/ReportExplorationAction.java,ReportExplorationAction,1,54,Low,UI / Swing components (integration-tested)
+client/gui/action,net/sf/freecol/client/gui/action/ReportForeignAction.java,ReportForeignAction,1,54,Low,UI / Swing components (integration-tested)
+client/gui/action,net/sf/freecol/client/gui/action/ReportHighScoresAction.java,ReportHighScoresAction,1,54,Low,UI / Swing components (integration-tested)
+client/gui/action,net/sf/freecol/client/gui/action/ReportHistoryAction.java,ReportHistoryAction,1,54,Low,UI / Swing components (integration-tested)
+client/gui/action,net/sf/freecol/client/gui/action/ReportIndianAction.java,ReportIndianAction,1,54,Low,UI / Swing components (integration-tested)
+client/gui/action,net/sf/freecol/client/gui/action/ReportLabourAction.java,ReportLabourAction,1,60,Low,UI / Swing components (integration-tested)
+client/gui/action,net/sf/freecol/client/gui/action/ReportMilitaryAction.java,ReportMilitaryAction,1,54,Low,UI / Swing components (integration-tested)
+client/gui/action,net/sf/freecol/client/gui/action/ReportNavalAction.java,ReportNavalAction,1,54,Low,UI / Swing components (integration-tested)
+client/gui/action,net/sf/freecol/client/gui/action/ReportProductionAction.java,ReportProductionAction,1,54,Low,UI / Swing components (integration-tested)
+client/gui/action,net/sf/freecol/client/gui/action/ReportReligionAction.java,ReportReligionAction,1,54,Low,UI / Swing components (integration-tested)
+client/gui/action,net/sf/freecol/client/gui/action/ReportRequirementsAction.java,ReportRequirementsAction,1,54,Low,UI / Swing components (integration-tested)
+client/gui/action,net/sf/freecol/client/gui/action/ReportTradeAction.java,ReportTradeAction,1,54,Low,UI / Swing components (integration-tested)
+client/gui/action,net/sf/freecol/client/gui/action/ReportTurnAction.java,ReportTurnAction,1,54,Low,UI / Swing components (integration-tested)
+client/gui/action,net/sf/freecol/client/gui/action/RetireAction.java,RetireAction,1,69,Low,UI / Swing components (integration-tested)
+client/gui/action,net/sf/freecol/client/gui/action/SaveAction.java,SaveAction,1,73,Low,UI / Swing components (integration-tested)
+client/gui/action,net/sf/freecol/client/gui/action/SaveAndQuitAction.java,SaveAndQuitAction,1,75,Low,UI / Swing components (integration-tested)
+client/gui/action,net/sf/freecol/client/gui/action/ScaleMapAction.java,ScaleMapAction,1,86,Low,UI / Swing components (integration-tested)
+client/gui/action,net/sf/freecol/client/gui/action/SelectableAction.java,SelectableAction,3,87,Low,UI / Swing components (integration-tested)
+client/gui/action,net/sf/freecol/client/gui/action/SelectableOptionAction.java,SelectableOptionAction,3,100,Low,UI / Swing components (integration-tested)
+client/gui/action,net/sf/freecol/client/gui/action/SentryAction.java,SentryAction,1,57,Low,UI / Swing components (integration-tested)
+client/gui/action,net/sf/freecol/client/gui/action/ShowDifficultyAction.java,ShowDifficultyAction,1,54,Low,UI / Swing components (integration-tested)
+client/gui/action,net/sf/freecol/client/gui/action/ShowGameOptionsAction.java,ShowGameOptionsAction,1,54,Low,UI / Swing components (integration-tested)
+client/gui/action,net/sf/freecol/client/gui/action/ShowMainAction.java,ShowMainAction,1,57,Low,UI / Swing components (integration-tested)
+client/gui/action,net/sf/freecol/client/gui/action/ShowMapGeneratorOptionsAction.java,ShowMapGeneratorOptionsAction,1,54,Low,UI / Swing components (integration-tested)
+client/gui/action,net/sf/freecol/client/gui/action/SkipUnitAction.java,SkipUnitAction,1,64,Low,UI / Swing components (integration-tested)
+client/gui/action,net/sf/freecol/client/gui/action/StartMapAction.java,StartMapAction,1,72,Low,UI / Swing components (integration-tested)
+client/gui/action,net/sf/freecol/client/gui/action/TilePopupAction.java,TilePopupAction,1,54,Low,UI / Swing components (integration-tested)
+client/gui/action,net/sf/freecol/client/gui/action/ToggleViewModeAction.java,ToggleViewModeAction,1,68,Low,UI / Swing components (integration-tested)
+client/gui/action,net/sf/freecol/client/gui/action/TradeRouteAction.java,TradeRouteAction,1,54,Low,UI / Swing components (integration-tested)
+client/gui/action,net/sf/freecol/client/gui/action/UnitAction.java,UnitAction,0,62,Low,UI / Swing components (integration-tested)
+client/gui/action,net/sf/freecol/client/gui/action/UnloadAction.java,UnloadAction,1,94,Low,UI / Swing components (integration-tested)
+client/gui/action,net/sf/freecol/client/gui/action/WaitAction.java,WaitAction,1,56,Low,UI / Swing components (integration-tested)
+client/gui/action,net/sf/freecol/client/gui/action/ZoomInAction.java,ZoomInAction,1,69,Low,UI / Swing components (integration-tested)
+client/gui/action,net/sf/freecol/client/gui/action/ZoomOutAction.java,ZoomOutAction,1,69,Low,UI / Swing components (integration-tested)
+client/gui/animation,net/sf/freecol/client/gui/animation/Animation.java,Animation,4,98,Low,UI / Swing components (integration-tested)
+client/gui/animation,net/sf/freecol/client/gui/animation/Animations.java,Animations,3,131,Low,UI / Swing components (integration-tested)
+client/gui/animation,net/sf/freecol/client/gui/animation/UnitImageAnimation.java,UnitImageAnimation,3,199,Low,UI / Swing components (integration-tested)
+client/gui/animation,net/sf/freecol/client/gui/animation/UnitMoveAnimation.java,UnitMoveAnimation,1,122,Low,UI / Swing components (integration-tested)
+client/gui/dialog,net/sf/freecol/client/gui/dialog/CaptureGoodsDialog.java,CaptureGoodsDialog,8,279,Low,UI / Swing components (integration-tested)
+client/gui/dialog,net/sf/freecol/client/gui/dialog/ChooseFoundingFatherDialog.java,ChooseFoundingFatherDialog,1,114,Low,UI / Swing components (integration-tested)
+client/gui/dialog,net/sf/freecol/client/gui/dialog/ClientOptionsDialog.java,ClientOptionsDialog,0,68,Low,UI / Swing components (integration-tested)
+client/gui/dialog,net/sf/freecol/client/gui/dialog/ConfirmDeclarationDialog.java,ConfirmDeclarationDialog,8,449,Low,UI / Swing components (integration-tested)
+client/gui/dialog,net/sf/freecol/client/gui/dialog/DeprecatedFreeColDialog.java,DeprecatedFreeColDialog,15,502,Low,UI / Swing components (integration-tested)
+client/gui/dialog,net/sf/freecol/client/gui/dialog/DialogPanel.java,DialogPanel,4,83,Low,UI / Swing components (integration-tested)
+client/gui/dialog,net/sf/freecol/client/gui/dialog/DifficultyDialog.java,DifficultyDialog,1,161,Low,UI / Swing components (integration-tested)
+client/gui/dialog,net/sf/freecol/client/gui/dialog/DumpCargoDialog.java,DumpCargoDialog,1,108,Low,UI / Swing components (integration-tested)
+client/gui/dialog,net/sf/freecol/client/gui/dialog/EditSettlementDialog.java,EditSettlementDialog,2,266,Low,UI / Swing components (integration-tested)
+client/gui/dialog,net/sf/freecol/client/gui/dialog/EmigrationDialog.java,EmigrationDialog,1,86,Low,UI / Swing components (integration-tested)
+client/gui/dialog,net/sf/freecol/client/gui/dialog/EndTurnDialog.java,EndTurnDialog,7,238,Low,UI / Swing components (integration-tested)
+client/gui/dialog,net/sf/freecol/client/gui/dialog/FirstContactDialog.java,FirstContactDialog,1,121,Low,UI / Swing components (integration-tested)
+client/gui/dialog,net/sf/freecol/client/gui/dialog/Flag.java,Flag,26,1237,Low,UI / Swing components (integration-tested)
+client/gui/dialog,net/sf/freecol/client/gui/dialog/FreeColConfirmDialog.java,FreeColConfirmDialog,0,94,Low,UI / Swing components (integration-tested)
+client/gui/dialog,net/sf/freecol/client/gui/dialog/FreeColDialog.java,FreeColDialog,1,107,Low,UI / Swing components (integration-tested)
+client/gui/dialog,net/sf/freecol/client/gui/dialog/GameOptionsDialog.java,GameOptionsDialog,0,77,Low,UI / Swing components (integration-tested)
+client/gui/dialog,net/sf/freecol/client/gui/dialog/LoadDialog.java,LoadDialog,1,91,Low,UI / Swing components (integration-tested)
+client/gui/dialog,net/sf/freecol/client/gui/dialog/MapGeneratorOptionsDialog.java,MapGeneratorOptionsDialog,0,211,Low,UI / Swing components (integration-tested)
+client/gui/dialog,net/sf/freecol/client/gui/dialog/MapSizeDialog.java,MapSizeDialog,1,99,Low,UI / Swing components (integration-tested)
+client/gui/dialog,net/sf/freecol/client/gui/dialog/MonarchDialog.java,MonarchDialog,0,112,Low,UI / Swing components (integration-tested)
+client/gui/dialog,net/sf/freecol/client/gui/dialog/NativeDemandDialog.java,NativeDemandDialog,0,103,Low,UI / Swing components (integration-tested)
+client/gui/dialog,net/sf/freecol/client/gui/dialog/NegotiationDialog.java,NegotiationDialog,31,1356,Low,UI / Swing components (integration-tested)
+client/gui/dialog,net/sf/freecol/client/gui/dialog/OptionsDialog.java,OptionsDialog,4,308,Low,UI / Swing components (integration-tested)
+client/gui/dialog,net/sf/freecol/client/gui/dialog/Parameters.java,Parameters,0,33,Low,UI / Swing components (integration-tested)
+client/gui/dialog,net/sf/freecol/client/gui/dialog/ParametersDialog.java,ParametersDialog,2,157,Low,UI / Swing components (integration-tested)
+client/gui/dialog,net/sf/freecol/client/gui/dialog/PreCombatDialog.java,PreCombatDialog,0,187,Low,UI / Swing components (integration-tested)
+client/gui/dialog,net/sf/freecol/client/gui/dialog/SaveDialog.java,SaveDialog,1,92,Low,UI / Swing components (integration-tested)
+client/gui/dialog,net/sf/freecol/client/gui/dialog/ScaleMapSizeDialog.java,ScaleMapSizeDialog,2,153,Low,UI / Swing components (integration-tested)
+client/gui/dialog,net/sf/freecol/client/gui/dialog/SelectDestinationDialog.java,SelectDestinationDialog,13,615,Low,UI / Swing components (integration-tested)
+client/gui/dialog,net/sf/freecol/client/gui/dialog/SelectGoodsAmountDialog.java,SelectGoodsAmountDialog,3,164,Low,UI / Swing components (integration-tested)
+client/gui/dialog,net/sf/freecol/client/gui/dialog/VictoryDialog.java,VictoryDialog,0,61,Low,UI / Swing components (integration-tested)
+client/gui/dialog,net/sf/freecol/client/gui/dialog/WarehouseDialog.java,WarehouseDialog,3,252,Low,UI / Swing components (integration-tested)
+client/gui/images,net/sf/freecol/client/gui/images/BaseTileTransitionImageCreator.java,BaseTileTransitionImageCreator,1,265,Low,UI / Swing components (integration-tested)
+client/gui/images,net/sf/freecol/client/gui/images/BeachTileAnimationImageCreator.java,BeachTileAnimationImageCreator,1,151,Low,UI / Swing components (integration-tested)
+client/gui/images,net/sf/freecol/client/gui/images/ColorizedImageCreator.java,ColorizedImageCreator,1,84,Low,UI / Swing components (integration-tested)
+client/gui/images,net/sf/freecol/client/gui/images/DeltaAnimationImageCreator.java,DeltaAnimationImageCreator,1,112,Low,UI / Swing components (integration-tested)
+client/gui/images,net/sf/freecol/client/gui/images/ImageCreators.java,ImageCreators,5,47,Low,UI / Swing components (integration-tested)
+client/gui/images,net/sf/freecol/client/gui/images/RiverAnimationImageCreator.java,RiverAnimationImageCreator,1,194,Low,UI / Swing components (integration-tested)
+client/gui/label,net/sf/freecol/client/gui/label/AbstractGoodsLabel.java,AbstractGoodsLabel,11,189,Low,UI / Swing components (integration-tested)
+client/gui/label,net/sf/freecol/client/gui/label/CargoLabel.java,CargoLabel,2,54,Low,UI / Swing components (integration-tested)
+client/gui/label,net/sf/freecol/client/gui/label/Draggable.java,Draggable,1,31,Low,UI / Swing components (integration-tested)
+client/gui/label,net/sf/freecol/client/gui/label/FreeColLabel.java,FreeColLabel,0,59,Low,UI / Swing components (integration-tested)
+client/gui/label,net/sf/freecol/client/gui/label/GoodsLabel.java,GoodsLabel,4,161,Low,UI / Swing components (integration-tested)
+client/gui/label,net/sf/freecol/client/gui/label/GoodsTypeLabel.java,GoodsTypeLabel,3,117,Low,UI / Swing components (integration-tested)
+client/gui/label,net/sf/freecol/client/gui/label/MarketLabel.java,MarketLabel,6,174,Low,UI / Swing components (integration-tested)
+client/gui/label,net/sf/freecol/client/gui/label/ProductionLabel.java,ProductionLabel,4,224,Low,UI / Swing components (integration-tested)
+client/gui/label,net/sf/freecol/client/gui/label/UnitLabel.java,UnitLabel,10,432,Low,UI / Swing components (integration-tested)
+client/gui/mapviewer,net/sf/freecol/client/gui/mapviewer/CanvasMapViewer.java,CanvasMapViewer,2,143,Low,UI / Swing components (integration-tested)
+client/gui/mapviewer,net/sf/freecol/client/gui/mapviewer/ChatDisplay.java,ChatDisplay,0,133,Low,UI / Swing components (integration-tested)
+client/gui/mapviewer,net/sf/freecol/client/gui/mapviewer/GUIMessage.java,GUIMessage,3,80,Low,UI / Swing components (integration-tested)
+client/gui/mapviewer,net/sf/freecol/client/gui/mapviewer/MapAsyncPainter.java,MapAsyncPainter,5,364,Low,UI / Swing components (integration-tested)
+client/gui/mapviewer,net/sf/freecol/client/gui/mapviewer/MapViewer.java,MapViewer,20,1808,Low,UI / Swing components (integration-tested)
+client/gui/mapviewer,net/sf/freecol/client/gui/mapviewer/MapViewerBounds.java,MapViewerBounds,11,594,Low,UI / Swing components (integration-tested)
+client/gui/mapviewer,net/sf/freecol/client/gui/mapviewer/MapViewerRepaintManager.java,MapViewerRepaintManager,6,367,Low,UI / Swing components (integration-tested)
+client/gui/mapviewer,net/sf/freecol/client/gui/mapviewer/MapViewerScaledUtils.java,MapViewerScaledUtils,0,153,Low,UI / Swing components (integration-tested)
+client/gui/mapviewer,net/sf/freecol/client/gui/mapviewer/MapViewerState.java,MapViewerState,16,274,Low,UI / Swing components (integration-tested)
+client/gui/mapviewer,net/sf/freecol/client/gui/mapviewer/RoadPainter.java,RoadPainter,0,182,Low,UI / Swing components (integration-tested)
+client/gui/mapviewer,net/sf/freecol/client/gui/mapviewer/TerrainCursor.java,TerrainCursor,1,107,Low,UI / Swing components (integration-tested)
+client/gui/mapviewer,net/sf/freecol/client/gui/mapviewer/TileBounds.java,TileBounds,4,63,Low,UI / Swing components (integration-tested)
+client/gui/mapviewer,net/sf/freecol/client/gui/mapviewer/TileViewer.java,TileViewer,13,822,Low,UI / Swing components (integration-tested)
+client/gui/mapviewer,net/sf/freecol/client/gui/mapviewer/UnitAnimator.java,UnitAnimator,4,120,Low,UI / Swing components (integration-tested)
+client/gui/menu,net/sf/freecol/client/gui/menu/DebugMenu.java,DebugMenu,0,439,Low,UI / Swing components (integration-tested)
+client/gui/menu,net/sf/freecol/client/gui/menu/FreeColMenuBar.java,FreeColMenuBar,5,266,Low,UI / Swing components (integration-tested)
+client/gui/menu,net/sf/freecol/client/gui/menu/FreeColMenuTest.java,FreeColMenuTest,3,159,Low,UI / Swing components (integration-tested)
+client/gui/menu,net/sf/freecol/client/gui/menu/InGameMenuBar.java,InGameMenuBar,2,349,Low,UI / Swing components (integration-tested)
+client/gui/menu,net/sf/freecol/client/gui/menu/MapEditorMenuBar.java,MapEditorMenuBar,1,166,Low,UI / Swing components (integration-tested)
+client/gui/menu,net/sf/freecol/client/gui/menu/MenuMouseMotionListener.java,MenuMouseMotionListener,2,73,Low,UI / Swing components (integration-tested)
+client/gui/option,net/sf/freecol/client/gui/option/AbstractUnitOptionUI.java,AbstractUnitOptionUI,7,196,Low,UI / Swing components (integration-tested)
+client/gui/option,net/sf/freecol/client/gui/option/AudioMixerOptionUI.java,AudioMixerOptionUI,4,151,Low,UI / Swing components (integration-tested)
+client/gui/option,net/sf/freecol/client/gui/option/BooleanOptionUI.java,BooleanOptionUI,7,100,Low,UI / Swing components (integration-tested)
+client/gui/option,net/sf/freecol/client/gui/option/FileOptionUI.java,FileOptionUI,4,143,Low,UI / Swing components (integration-tested)
+client/gui/option,net/sf/freecol/client/gui/option/FreeColActionUI.java,FreeColActionUI,22,321,Low,UI / Swing components (integration-tested)
+client/gui/option,net/sf/freecol/client/gui/option/FullscreenDisplayModeOptionUI.java,FullscreenDisplayModeOptionUI,3,114,Low,UI / Swing components (integration-tested)
+client/gui/option,net/sf/freecol/client/gui/option/IntegerOptionUI.java,IntegerOptionUI,3,93,Low,UI / Swing components (integration-tested)
+client/gui/option,net/sf/freecol/client/gui/option/LanguageOptionUI.java,LanguageOptionUI,3,85,Low,UI / Swing components (integration-tested)
+client/gui/option,net/sf/freecol/client/gui/option/ListOptionUI.java,ListOptionUI,5,276,Low,UI / Swing components (integration-tested)
+client/gui/option,net/sf/freecol/client/gui/option/ModOptionUI.java,ModOptionUI,6,176,Low,UI / Swing components (integration-tested)
+client/gui/option,net/sf/freecol/client/gui/option/OptionGroupUI.java,OptionGroupUI,10,288,Low,UI / Swing components (integration-tested)
+client/gui/option,net/sf/freecol/client/gui/option/OptionUI.java,OptionUI,11,210,Low,UI / Swing components (integration-tested)
+client/gui/option,net/sf/freecol/client/gui/option/OptionUpdater.java,OptionUpdater,2,42,Low,UI / Swing components (integration-tested)
+client/gui/option,net/sf/freecol/client/gui/option/PercentageOptionUI.java,PercentageOptionUI,1,77,Low,UI / Swing components (integration-tested)
+client/gui/option,net/sf/freecol/client/gui/option/RangeOptionUI.java,RangeOptionUI,2,91,Low,UI / Swing components (integration-tested)
+client/gui/option,net/sf/freecol/client/gui/option/SelectOptionUI.java,SelectOptionUI,3,89,Low,UI / Swing components (integration-tested)
+client/gui/option,net/sf/freecol/client/gui/option/SliderOptionUI.java,SliderOptionUI,4,97,Low,UI / Swing components (integration-tested)
+client/gui/option,net/sf/freecol/client/gui/option/StringOptionUI.java,StringOptionUI,3,87,Low,UI / Swing components (integration-tested)
+client/gui/option,net/sf/freecol/client/gui/option/TextOptionUI.java,TextOptionUI,3,77,Low,UI / Swing components (integration-tested)
+client/gui/option,net/sf/freecol/client/gui/option/UnitTypeOptionUI.java,UnitTypeOptionUI,4,103,Low,UI / Swing components (integration-tested)
+client/gui/panel,net/sf/freecol/client/gui/panel/AboutPanel.java,AboutPanel,2,187,Low,UI / Swing components (integration-tested)
+client/gui/panel,net/sf/freecol/client/gui/panel/BuildQueuePanel.java,BuildQueuePanel,17,1055,Low,UI / Swing components (integration-tested)
+client/gui/panel,net/sf/freecol/client/gui/panel/BuildingPanel.java,BuildingPanel,8,310,Low,UI / Swing components (integration-tested)
+client/gui/panel,net/sf/freecol/client/gui/panel/BuildingsLayoutManager.java,BuildingsLayoutManager,6,313,Low,UI / Swing components (integration-tested)
+client/gui/panel,net/sf/freecol/client/gui/panel/CargoPanel.java,CargoPanel,13,309,Low,UI / Swing components (integration-tested)
+client/gui/panel,net/sf/freecol/client/gui/panel/ChatPanel.java,ChatPanel,4,121,Low,UI / Swing components (integration-tested)
+client/gui/panel,net/sf/freecol/client/gui/panel/ColonyPanel.java,ColonyPanel,92,2825,Low,UI / Swing components (integration-tested)
+client/gui/panel,net/sf/freecol/client/gui/panel/ColorCellEditor.java,ColorCellEditor,3,120,Low,UI / Swing components (integration-tested)
+client/gui/panel,net/sf/freecol/client/gui/panel/ColorCellRenderer.java,ColorCellRenderer,1,67,Low,UI / Swing components (integration-tested)
+client/gui/panel,net/sf/freecol/client/gui/panel/ColorChooserPanel.java,ColorChooserPanel,3,94,Low,UI / Swing components (integration-tested)
+client/gui/panel,net/sf/freecol/client/gui/panel/ConstructionPanel.java,ConstructionPanel,7,251,Low,UI / Swing components (integration-tested)
+client/gui/panel,net/sf/freecol/client/gui/panel/CornerMapControls.java,CornerMapControls,5,326,Low,UI / Swing components (integration-tested)
+client/gui/panel,net/sf/freecol/client/gui/panel/DeclarationPanel.java,DeclarationPanel,8,342,Low,UI / Swing components (integration-tested)
+client/gui/panel,net/sf/freecol/client/gui/panel/DefaultTransferHandler.java,DefaultTransferHandler,12,637,Low,UI / Swing components (integration-tested)
+client/gui/panel,net/sf/freecol/client/gui/panel/DragListener.java,DragListener,1,176,Low,UI / Swing components (integration-tested)
+client/gui/panel,net/sf/freecol/client/gui/panel/DropListener.java,DropListener,1,61,Low,UI / Swing components (integration-tested)
+client/gui/panel,net/sf/freecol/client/gui/panel/DropTarget.java,DropTarget,5,86,Low,UI / Swing components (integration-tested)
+client/gui/panel,net/sf/freecol/client/gui/panel/ErrorPanel.java,ErrorPanel,2,120,Low,UI / Swing components (integration-tested)
+client/gui/panel,net/sf/freecol/client/gui/panel/EuropePanel.java,EuropePanel,41,920,Low,UI / Swing components (integration-tested)
+client/gui/panel,net/sf/freecol/client/gui/panel/EventPanel.java,EventPanel,1,73,Low,UI / Swing components (integration-tested)
+client/gui/panel,net/sf/freecol/client/gui/panel/FindSettlementPanel.java,FindSettlementPanel,10,271,Low,UI / Swing components (integration-tested)
+client/gui/panel,net/sf/freecol/client/gui/panel/FreeColBorder.java,FreeColBorder,1,32,Low,UI / Swing components (integration-tested)
+client/gui/panel,net/sf/freecol/client/gui/panel/FreeColButton.java,FreeColButton,2,78,Low,UI / Swing components (integration-tested)
+client/gui/panel,net/sf/freecol/client/gui/panel/FreeColImageBorder.java,FreeColImageBorder,16,590,Low,UI / Swing components (integration-tested)
+client/gui/panel,net/sf/freecol/client/gui/panel/FreeColPanel.java,FreeColPanel,14,347,Low,UI / Swing components (integration-tested)
+client/gui/panel,net/sf/freecol/client/gui/panel/FreeColProgressBar.java,FreeColProgressBar,1,251,Low,UI / Swing components (integration-tested)
+client/gui/panel,net/sf/freecol/client/gui/panel/GoodsTypePanel.java,GoodsTypePanel,5,149,Low,UI / Swing components (integration-tested)
+client/gui/panel,net/sf/freecol/client/gui/panel/ImageSelection.java,ImageSelection,3,74,Low,UI / Swing components (integration-tested)
+client/gui/panel,net/sf/freecol/client/gui/panel/InPortPanel.java,InPortPanel,1,79,Low,UI / Swing components (integration-tested)
+client/gui/panel,net/sf/freecol/client/gui/panel/IndianSettlementPanel.java,IndianSettlementPanel,1,150,Low,UI / Swing components (integration-tested)
+client/gui/panel,net/sf/freecol/client/gui/panel/InfoPanel.java,InfoPanel,12,618,Low,UI / Swing components (integration-tested)
+client/gui/panel,net/sf/freecol/client/gui/panel/InformationPanel.java,InformationPanel,2,176,Low,UI / Swing components (integration-tested)
+client/gui/panel,net/sf/freecol/client/gui/panel/MainPanel.java,MainPanel,1,115,Low,UI / Swing components (integration-tested)
+client/gui/panel,net/sf/freecol/client/gui/panel/MapControls.java,MapControls,12,214,Low,UI / Swing components (integration-tested)
+client/gui/panel,net/sf/freecol/client/gui/panel/MapEditorToolboxPanel.java,MapEditorToolboxPanel,2,138,Low,UI / Swing components (integration-tested)
+client/gui/panel,net/sf/freecol/client/gui/panel/MapEditorTransformPanel.java,MapEditorTransformPanel,15,501,Low,UI / Swing components (integration-tested)
+client/gui/panel,net/sf/freecol/client/gui/panel/MigPanel.java,MigPanel,2,75,Low,UI / Swing components (integration-tested)
+client/gui/panel,net/sf/freecol/client/gui/panel/MiniMap.java,MiniMap,17,534,Low,UI / Swing components (integration-tested)
+client/gui/panel,net/sf/freecol/client/gui/panel/MiniMapFreeColPanel.java,MiniMapFreeColPanel,2,46,Low,UI / Swing components (integration-tested)
+client/gui/panel,net/sf/freecol/client/gui/panel/NewPanel.java,NewPanel,6,628,Low,UI / Swing components (integration-tested)
+client/gui/panel,net/sf/freecol/client/gui/panel/NewUnitPanel.java,NewUnitPanel,4,175,Low,UI / Swing components (integration-tested)
+client/gui/panel,net/sf/freecol/client/gui/panel/PlayersTable.java,PlayersTable,32,737,Low,UI / Swing components (integration-tested)
+client/gui/panel,net/sf/freecol/client/gui/panel/PortPanel.java,PortPanel,8,163,Low,UI / Swing components (integration-tested)
+client/gui/panel,net/sf/freecol/client/gui/panel/PurchasePanel.java,PurchasePanel,0,44,Low,UI / Swing components (integration-tested)
+client/gui/panel,net/sf/freecol/client/gui/panel/QuickActionMenu.java,QuickActionMenu,1,927,Low,UI / Swing components (integration-tested)
+client/gui/panel,net/sf/freecol/client/gui/panel/RecruitPanel.java,RecruitPanel,4,167,Low,UI / Swing components (integration-tested)
+client/gui/panel,net/sf/freecol/client/gui/panel/ServerListPanel.java,ServerListPanel,6,178,Low,UI / Swing components (integration-tested)
+client/gui/panel,net/sf/freecol/client/gui/panel/ServerListTableModel.java,ServerListTableModel,6,124,Low,UI / Swing components (integration-tested)
+client/gui/panel,net/sf/freecol/client/gui/panel/StartGamePanel.java,StartGamePanel,8,322,Low,UI / Swing components (integration-tested)
+client/gui/panel,net/sf/freecol/client/gui/panel/StatisticsPanel.java,StatisticsPanel,8,242,Low,UI / Swing components (integration-tested)
+client/gui/panel,net/sf/freecol/client/gui/panel/StatusPanel.java,StatusPanel,1,67,Low,UI / Swing components (integration-tested)
+client/gui/panel,net/sf/freecol/client/gui/panel/TilePanel.java,TilePanel,2,228,Low,UI / Swing components (integration-tested)
+client/gui/panel,net/sf/freecol/client/gui/panel/TradeRouteInputPanel.java,TradeRouteInputPanel,26,842,Low,UI / Swing components (integration-tested)
+client/gui/panel,net/sf/freecol/client/gui/panel/TradeRoutePanel.java,TradeRoutePanel,4,347,Low,UI / Swing components (integration-tested)
+client/gui/panel,net/sf/freecol/client/gui/panel/TrainPanel.java,TrainPanel,0,44,Low,UI / Swing components (integration-tested)
+client/gui/panel,net/sf/freecol/client/gui/panel/UnitButton.java,UnitButton,2,156,Low,UI / Swing components (integration-tested)
+client/gui/panel,net/sf/freecol/client/gui/panel/UnitPanel.java,UnitPanel,6,225,Low,UI / Swing components (integration-tested)
+client/gui/panel,net/sf/freecol/client/gui/panel/Utility.java,Utility,55,804,Low,UI / Swing components (integration-tested)
+client/gui/panel,net/sf/freecol/client/gui/panel/WorkProductionPanel.java,WorkProductionPanel,1,165,Low,UI / Swing components (integration-tested)
+client/gui/panel,net/sf/freecol/client/gui/panel/WrapLayout.java,WrapLayout,15,528,Low,UI / Swing components (integration-tested)
+client/gui/panel/colopedia,net/sf/freecol/client/gui/panel/colopedia/BuildingDetailPanel.java,BuildingDetailPanel,2,288,Low,UI / Swing components (integration-tested)
+client/gui/panel/colopedia,net/sf/freecol/client/gui/panel/colopedia/ColopediaDetailPanel.java,ColopediaDetailPanel,2,48,Low,UI / Swing components (integration-tested)
+client/gui/panel/colopedia,net/sf/freecol/client/gui/panel/colopedia/ColopediaGameObjectTypePanel.java,ColopediaGameObjectTypePanel,5,272,Low,UI / Swing components (integration-tested)
+client/gui/panel/colopedia,net/sf/freecol/client/gui/panel/colopedia/ColopediaPanel.java,ColopediaPanel,7,282,Low,UI / Swing components (integration-tested)
+client/gui/panel/colopedia,net/sf/freecol/client/gui/panel/colopedia/ColopediaTreeCellRenderer.java,ColopediaTreeCellRenderer,1,80,Low,UI / Swing components (integration-tested)
+client/gui/panel/colopedia,net/sf/freecol/client/gui/panel/colopedia/ColopediaTreeItem.java,ColopediaTreeItem,5,90,Low,UI / Swing components (integration-tested)
+client/gui/panel/colopedia,net/sf/freecol/client/gui/panel/colopedia/ConceptDetailPanel.java,ConceptDetailPanel,5,173,Low,UI / Swing components (integration-tested)
+client/gui/panel/colopedia,net/sf/freecol/client/gui/panel/colopedia/FatherDetailPanel.java,FatherDetailPanel,3,154,Low,UI / Swing components (integration-tested)
+client/gui/panel/colopedia,net/sf/freecol/client/gui/panel/colopedia/GoodsDetailPanel.java,GoodsDetailPanel,2,225,Low,UI / Swing components (integration-tested)
+client/gui/panel/colopedia,net/sf/freecol/client/gui/panel/colopedia/NationDetailPanel.java,NationDetailPanel,2,102,Low,UI / Swing components (integration-tested)
+client/gui/panel/colopedia,net/sf/freecol/client/gui/panel/colopedia/NationTypeDetailPanel.java,NationTypeDetailPanel,2,214,Low,UI / Swing components (integration-tested)
+client/gui/panel/colopedia,net/sf/freecol/client/gui/panel/colopedia/ResourcesDetailPanel.java,ResourcesDetailPanel,2,116,Low,UI / Swing components (integration-tested)
+client/gui/panel/colopedia,net/sf/freecol/client/gui/panel/colopedia/TerrainDetailPanel.java,TerrainDetailPanel,2,167,Low,UI / Swing components (integration-tested)
+client/gui/panel/colopedia,net/sf/freecol/client/gui/panel/colopedia/UnitDetailPanel.java,UnitDetailPanel,2,233,Low,UI / Swing components (integration-tested)
+client/gui/panel/mapeditor,net/sf/freecol/client/gui/panel/mapeditor/ChooseAreaModificationPanel.java,ChooseAreaModificationPanel,3,107,Low,UI / Swing components (integration-tested)
+client/gui/panel/report,net/sf/freecol/client/gui/panel/report/CompactLabourReport.java,CompactLabourReport,2,650,Low,UI / Swing components (integration-tested)
+client/gui/panel/report,net/sf/freecol/client/gui/panel/report/LabourData.java,LabourData,43,578,Low,UI / Swing components (integration-tested)
+client/gui/panel/report,net/sf/freecol/client/gui/panel/report/ReportCargoPanel.java,ReportCargoPanel,0,66,Low,UI / Swing components (integration-tested)
+client/gui/panel/report,net/sf/freecol/client/gui/panel/report/ReportClassicColonyPanel.java,ReportClassicColonyPanel,0,177,Low,UI / Swing components (integration-tested)
+client/gui/panel/report,net/sf/freecol/client/gui/panel/report/ReportCompactColonyPanel.java,ReportCompactColonyPanel,9,1181,Low,UI / Swing components (integration-tested)
+client/gui/panel/report,net/sf/freecol/client/gui/panel/report/ReportContinentalCongressPanel.java,ReportContinentalCongressPanel,0,141,Low,UI / Swing components (integration-tested)
+client/gui/panel/report,net/sf/freecol/client/gui/panel/report/ReportEducationPanel.java,ReportEducationPanel,0,102,Low,UI / Swing components (integration-tested)
+client/gui/panel/report,net/sf/freecol/client/gui/panel/report/ReportExplorationPanel.java,ReportExplorationPanel,0,94,Low,UI / Swing components (integration-tested)
+client/gui/panel/report,net/sf/freecol/client/gui/panel/report/ReportForeignAffairPanel.java,ReportForeignAffairPanel,0,149,Low,UI / Swing components (integration-tested)
+client/gui/panel/report,net/sf/freecol/client/gui/panel/report/ReportHighScoresPanel.java,ReportHighScoresPanel,0,125,Low,UI / Swing components (integration-tested)
+client/gui/panel/report,net/sf/freecol/client/gui/panel/report/ReportHistoryPanel.java,ReportHistoryPanel,0,57,Low,UI / Swing components (integration-tested)
+client/gui/panel/report,net/sf/freecol/client/gui/panel/report/ReportIndianPanel.java,ReportIndianPanel,0,231,Low,UI / Swing components (integration-tested)
+client/gui/panel/report,net/sf/freecol/client/gui/panel/report/ReportLabourDetailPanel.java,ReportLabourDetailPanel,1,139,Low,UI / Swing components (integration-tested)
+client/gui/panel/report,net/sf/freecol/client/gui/panel/report/ReportLabourPanel.java,ReportLabourPanel,7,246,Low,UI / Swing components (integration-tested)
+client/gui/panel/report,net/sf/freecol/client/gui/panel/report/ReportMilitaryPanel.java,ReportMilitaryPanel,0,71,Low,UI / Swing components (integration-tested)
+client/gui/panel/report,net/sf/freecol/client/gui/panel/report/ReportNavalPanel.java,ReportNavalPanel,0,67,Low,UI / Swing components (integration-tested)
+client/gui/panel/report,net/sf/freecol/client/gui/panel/report/ReportPanel.java,ReportPanel,4,184,Low,UI / Swing components (integration-tested)
+client/gui/panel/report,net/sf/freecol/client/gui/panel/report/ReportProductionPanel.java,ReportProductionPanel,0,183,Low,UI / Swing components (integration-tested)
+client/gui/panel/report,net/sf/freecol/client/gui/panel/report/ReportReligiousPanel.java,ReportReligiousPanel,0,83,Low,UI / Swing components (integration-tested)
+client/gui/panel/report,net/sf/freecol/client/gui/panel/report/ReportRequirementsPanel.java,ReportRequirementsPanel,0,402,Low,UI / Swing components (integration-tested)
+client/gui/panel/report,net/sf/freecol/client/gui/panel/report/ReportTradePanel.java,ReportTradePanel,0,238,Low,UI / Swing components (integration-tested)
+client/gui/panel/report,net/sf/freecol/client/gui/panel/report/ReportTurnPanel.java,ReportTurnPanel,1,321,Low,UI / Swing components (integration-tested)
+client/gui/panel/report,net/sf/freecol/client/gui/panel/report/ReportUnitPanel.java,ReportUnitPanel,1,267,Low,UI / Swing components (integration-tested)
+client/gui/plaf,net/sf/freecol/client/gui/plaf/FreeColBrightPanelUI.java,FreeColBrightPanelUI,2,53,Low,UI / Swing components (integration-tested)
+client/gui/plaf,net/sf/freecol/client/gui/plaf/FreeColButtonUI.java,FreeColButtonUI,5,147,Low,UI / Swing components (integration-tested)
+client/gui/plaf,net/sf/freecol/client/gui/plaf/FreeColCheckBoxMenuItemUI.java,FreeColCheckBoxMenuItemUI,3,51,Low,UI / Swing components (integration-tested)
+client/gui/plaf,net/sf/freecol/client/gui/plaf/FreeColCheckBoxUI.java,FreeColCheckBoxUI,7,139,Low,UI / Swing components (integration-tested)
+client/gui/plaf,net/sf/freecol/client/gui/plaf/FreeColComboBoxRenderer.java,FreeColComboBoxRenderer,4,198,Low,UI / Swing components (integration-tested)
+client/gui/plaf,net/sf/freecol/client/gui/plaf/FreeColComboBoxUI.java,FreeColComboBoxUI,2,49,Low,UI / Swing components (integration-tested)
+client/gui/plaf,net/sf/freecol/client/gui/plaf/FreeColFileChooserUI.java,FreeColFileChooserUI,2,64,Low,UI / Swing components (integration-tested)
+client/gui/plaf,net/sf/freecol/client/gui/plaf/FreeColFormattedTextFieldUI.java,FreeColFormattedTextFieldUI,1,38,Low,UI / Swing components (integration-tested)
+client/gui/plaf,net/sf/freecol/client/gui/plaf/FreeColInternalFrameUI.java,FreeColInternalFrameUI,9,186,Low,UI / Swing components (integration-tested)
+client/gui/plaf,net/sf/freecol/client/gui/plaf/FreeColLabelUI.java,FreeColLabelUI,3,51,Low,UI / Swing components (integration-tested)
+client/gui/plaf,net/sf/freecol/client/gui/plaf/FreeColListUI.java,FreeColListUI,3,55,Low,UI / Swing components (integration-tested)
+client/gui/plaf,net/sf/freecol/client/gui/plaf/FreeColLookAndFeel.java,FreeColLookAndFeel,8,302,Low,UI / Swing components (integration-tested)
+client/gui/plaf,net/sf/freecol/client/gui/plaf/FreeColMenuBarUI.java,FreeColMenuBarUI,2,51,Low,UI / Swing components (integration-tested)
+client/gui/plaf,net/sf/freecol/client/gui/plaf/FreeColMenuItemUI.java,FreeColMenuItemUI,3,51,Low,UI / Swing components (integration-tested)
+client/gui/plaf,net/sf/freecol/client/gui/plaf/FreeColMenuUI.java,FreeColMenuUI,6,126,Low,UI / Swing components (integration-tested)
+client/gui/plaf,net/sf/freecol/client/gui/plaf/FreeColOptionPaneUI.java,FreeColOptionPaneUI,7,320,Low,UI / Swing components (integration-tested)
+client/gui/plaf,net/sf/freecol/client/gui/plaf/FreeColPanelUI.java,FreeColPanelUI,2,51,Low,UI / Swing components (integration-tested)
+client/gui/plaf,net/sf/freecol/client/gui/plaf/FreeColPopupMenuUI.java,FreeColPopupMenuUI,2,53,Low,UI / Swing components (integration-tested)
+client/gui/plaf,net/sf/freecol/client/gui/plaf/FreeColRadioButtonMenuItemUI.java,FreeColRadioButtonMenuItemUI,3,51,Low,UI / Swing components (integration-tested)
+client/gui/plaf,net/sf/freecol/client/gui/plaf/FreeColRadioButtonUI.java,FreeColRadioButtonUI,7,126,Low,UI / Swing components (integration-tested)
+client/gui/plaf,net/sf/freecol/client/gui/plaf/FreeColScrollPaneUI.java,FreeColScrollPaneUI,3,68,Low,UI / Swing components (integration-tested)
+client/gui/plaf,net/sf/freecol/client/gui/plaf/FreeColSelectedPanelUI.java,FreeColSelectedPanelUI,2,59,Low,UI / Swing components (integration-tested)
+client/gui/plaf,net/sf/freecol/client/gui/plaf/FreeColSpinnerUI.java,FreeColSpinnerUI,2,26,Low,UI / Swing components (integration-tested)
+client/gui/plaf,net/sf/freecol/client/gui/plaf/FreeColTableHeaderUI.java,FreeColTableHeaderUI,3,57,Low,UI / Swing components (integration-tested)
+client/gui/plaf,net/sf/freecol/client/gui/plaf/FreeColTableUI.java,FreeColTableUI,3,51,Low,UI / Swing components (integration-tested)
+client/gui/plaf,net/sf/freecol/client/gui/plaf/FreeColTextAreaUI.java,FreeColTextAreaUI,3,64,Low,UI / Swing components (integration-tested)
+client/gui/plaf,net/sf/freecol/client/gui/plaf/FreeColTextFieldUI.java,FreeColTextFieldUI,3,77,Low,UI / Swing components (integration-tested)
+client/gui/plaf,net/sf/freecol/client/gui/plaf/FreeColToolTipUI.java,FreeColToolTipUI,6,158,Low,UI / Swing components (integration-tested)
+client/gui/plaf,net/sf/freecol/client/gui/plaf/FreeColTransparentPanelUI.java,FreeColTransparentPanelUI,2,61,Low,UI / Swing components (integration-tested)
+client/gui/plaf,net/sf/freecol/client/gui/plaf/LAFUtilities.java,LAFUtilities,1,61,Low,UI / Swing components (integration-tested)
+client/gui/tooltip,net/sf/freecol/client/gui/tooltip/BuildingToolTip.java,BuildingToolTip,1,206,Low,UI / Swing components (integration-tested)
+client/gui/tooltip,net/sf/freecol/client/gui/tooltip/RebelToolTip.java,RebelToolTip,1,168,Low,UI / Swing components (integration-tested)
+client/gui/video,net/sf/freecol/client/gui/video/VideoComponent.java,VideoComponent,5,196,Low,UI / Swing components (integration-tested)
+client/gui/video,net/sf/freecol/client/gui/video/VideoListener.java,VideoListener,1,31,Low,UI / Swing components (integration-tested)
+client/networking,net/sf/freecol/client/networking/UserServerAPI.java,UserServerAPI,5,192,Medium,Client-side networking
+common,net/sf/freecol/common/FreeColException.java,FreeColException,2,79,Medium,"Common root (exceptions, seed, memory)"
+common,net/sf/freecol/common/FreeColSeed.java,FreeColSeed,4,78,Medium,"Common root (exceptions, seed, memory)"
+common,net/sf/freecol/common/FreeColUserMessageException.java,FreeColUserMessageException,1,64,Medium,"Common root (exceptions, seed, memory)"
+common,net/sf/freecol/common/MemoryManager.java,MemoryManager,2,55,Medium,"Common root (exceptions, seed, memory)"
+common,net/sf/freecol/common/ObjectWithId.java,ObjectWithId,1,35,Medium,"Common root (exceptions, seed, memory)"
+common/debug,net/sf/freecol/common/debug/DebugUtils.java,DebugUtils,32,1346,Low,Debug utilities
+common/debug,net/sf/freecol/common/debug/FreeColDebugger.java,FreeColDebugger,33,505,Low,Debug utilities
+common/i18n,net/sf/freecol/common/i18n/DefaultNumberRule.java,DefaultNumberRule,5,87,Medium,Internationalization helpers
+common/i18n,net/sf/freecol/common/i18n/DualNumberRule.java,DualNumberRule,1,43,Medium,Internationalization helpers
+common/i18n,net/sf/freecol/common/i18n/Messages.java,Messages,29,990,Medium,Internationalization helpers
+common/i18n,net/sf/freecol/common/i18n/NameCache.java,NameCache,16,608,Medium,Internationalization helpers
+common/i18n,net/sf/freecol/common/i18n/Number.java,Number,2,70,Medium,Internationalization helpers
+common/i18n,net/sf/freecol/common/i18n/NumberRules.java,NumberRules,7,172,Medium,Internationalization helpers
+common/i18n,net/sf/freecol/common/i18n/OtherNumberRule.java,OtherNumberRule,1,34,Medium,Internationalization helpers
+common/i18n,net/sf/freecol/common/i18n/PluralNumberRule.java,PluralNumberRule,1,38,Medium,Internationalization helpers
+common/i18n,net/sf/freecol/common/i18n/Relation.java,Relation,7,175,Medium,Internationalization helpers
+common/i18n,net/sf/freecol/common/i18n/Rule.java,Rule,3,124,Medium,Internationalization helpers
+common/i18n,net/sf/freecol/common/i18n/Selector.java,Selector,1,35,Medium,Internationalization helpers
+common/i18n,net/sf/freecol/common/i18n/ZeroOneNumberRule.java,ZeroOneNumberRule,1,38,Medium,Internationalization helpers
+common/io,net/sf/freecol/common/io/FreeColDataFile.java,FreeColDataFile,6,456,Medium,"Serialization, save/load, data files"
+common/io,net/sf/freecol/common/io/FreeColDirectories.java,FreeColDirectories,53,1292,Medium,"Serialization, save/load, data files"
+common/io,net/sf/freecol/common/io/FreeColModFile.java,FreeColModFile,8,221,Medium,"Serialization, save/load, data files"
+common/io,net/sf/freecol/common/io/FreeColRules.java,FreeColRules,3,79,Medium,"Serialization, save/load, data files"
+common/io,net/sf/freecol/common/io/FreeColSavegameFile.java,FreeColSavegameFile,7,185,Medium,"Serialization, save/load, data files"
+common/io,net/sf/freecol/common/io/FreeColTcFile.java,FreeColTcFile,2,81,Medium,"Serialization, save/load, data files"
+common/io,net/sf/freecol/common/io/FreeColXMLReader.java,FreeColXMLReader,43,1177,Medium,"Serialization, save/load, data files"
+common/io,net/sf/freecol/common/io/FreeColXMLWriter.java,FreeColXMLWriter,56,635,Medium,"Serialization, save/load, data files"
+common/io/sza,net/sf/freecol/common/io/sza/AnimationEvent.java,AnimationEvent,0,27,Medium,"Serialization, save/load, data files"
+common/io/sza,net/sf/freecol/common/io/sza/ImageAnimationEvent.java,ImageAnimationEvent,2,42,Medium,"Serialization, save/load, data files"
+common/io/sza,net/sf/freecol/common/io/sza/SimpleZippedAnimation.java,SimpleZippedAnimation,8,300,Medium,"Serialization, save/load, data files"
+common/logging,net/sf/freecol/common/logging/DefaultHandler.java,DefaultHandler,3,167,Low,Logging helpers
+common/logging,net/sf/freecol/common/logging/TextFormatter.java,TextFormatter,1,68,Low,Logging helpers
+common/metaserver,net/sf/freecol/common/metaserver/MetaServerUtils.java,MetaServerUtils,8,350,Medium,Meta-server utilities
+common/metaserver,net/sf/freecol/common/metaserver/ServerInfo.java,ServerInfo,14,237,Medium,Meta-server utilities
+common/model,net/sf/freecol/common/model/Ability.java,Ability,7,586,High,"Core data model (game objects, units, map, colony)"
+common/model,net/sf/freecol/common/model/AbstractGoods.java,AbstractGoods,20,307,High,"Core data model (game objects, units, map, colony)"
+common/model,net/sf/freecol/common/model/AbstractUnit.java,AbstractUnit,22,376,High,"Core data model (game objects, units, map, colony)"
+common/model,net/sf/freecol/common/model/Area.java,Area,15,284,High,"Core data model (game objects, units, map, colony)"
+common/model,net/sf/freecol/common/model/BaseProduction.java,BaseProduction,2,65,High,"Core data model (game objects, units, map, colony)"
+common/model,net/sf/freecol/common/model/BuildQueue.java,BuildQueue,16,233,High,"Core data model (game objects, units, map, colony)"
+common/model,net/sf/freecol/common/model/BuildableType.java,BuildableType,20,416,High,"Core data model (game objects, units, map, colony)"
+common/model,net/sf/freecol/common/model/Building.java,Building,37,584,High,"Core data model (game objects, units, map, colony)"
+common/model,net/sf/freecol/common/model/BuildingType.java,BuildingType,30,721,High,"Core data model (game objects, units, map, colony)"
+common/model,net/sf/freecol/common/model/Colony.java,Colony,158,3315,High,"Core data model (game objects, units, map, colony)"
+common/model,net/sf/freecol/common/model/ColonyTile.java,ColonyTile,30,559,High,"Core data model (game objects, units, map, colony)"
+common/model,net/sf/freecol/common/model/ColonyTradeItem.java,ColonyTradeItem,10,225,High,"Core data model (game objects, units, map, colony)"
+common/model,net/sf/freecol/common/model/ColonyWas.java,ColonyWas,1,81,High,"Core data model (game objects, units, map, colony)"
+common/model,net/sf/freecol/common/model/CombatModel.java,CombatModel,19,308,High,"Core data model (game objects, units, map, colony)"
+common/model,net/sf/freecol/common/model/Constants.java,Constants,4,162,High,"Core data model (game objects, units, map, colony)"
+common/model,net/sf/freecol/common/model/Consumer.java,Consumer,3,89,High,"Core data model (game objects, units, map, colony)"
+common/model,net/sf/freecol/common/model/DiplomaticTrade.java,DiplomaticTrade,32,563,High,"Core data model (game objects, units, map, colony)"
+common/model,net/sf/freecol/common/model/Direction.java,Direction,13,253,High,"Core data model (game objects, units, map, colony)"
+common/model,net/sf/freecol/common/model/Disaster.java,Disaster,6,260,High,"Core data model (game objects, units, map, colony)"
+common/model,net/sf/freecol/common/model/Effect.java,Effect,4,162,High,"Core data model (game objects, units, map, colony)"
+common/model,net/sf/freecol/common/model/Europe.java,Europe,41,784,High,"Core data model (game objects, units, map, colony)"
+common/model,net/sf/freecol/common/model/EuropeWas.java,EuropeWas,2,75,High,"Core data model (game objects, units, map, colony)"
+common/model,net/sf/freecol/common/model/EuropeanNationType.java,EuropeanNationType,7,320,High,"Core data model (game objects, units, map, colony)"
+common/model,net/sf/freecol/common/model/Event.java,Event,8,266,High,"Core data model (game objects, units, map, colony)"
+common/model,net/sf/freecol/common/model/ExportData.java,ExportData,14,264,High,"Core data model (game objects, units, map, colony)"
+common/model,net/sf/freecol/common/model/Feature.java,Feature,23,449,High,"Core data model (game objects, units, map, colony)"
+common/model,net/sf/freecol/common/model/FeatureContainer.java,FeatureContainer,20,548,High,"Core data model (game objects, units, map, colony)"
+common/model,net/sf/freecol/common/model/Force.java,Force,17,353,High,"Core data model (game objects, units, map, colony)"
+common/model,net/sf/freecol/common/model/FoundingFather.java,FoundingFather,13,333,High,"Core data model (game objects, units, map, colony)"
+common/model,net/sf/freecol/common/model/FreeColGameObject.java,FreeColGameObject,20,355,High,"Core data model (game objects, units, map, colony)"
+common/model,net/sf/freecol/common/model/FreeColGameObjectListener.java,FreeColGameObjectListener,3,54,High,"Core data model (game objects, units, map, colony)"
+common/model,net/sf/freecol/common/model/FreeColObject.java,FreeColObject,91,1431,High,"Core data model (game objects, units, map, colony)"
+common/model,net/sf/freecol/common/model/FreeColSpecObject.java,FreeColSpecObject,2,76,High,"Core data model (game objects, units, map, colony)"
+common/model,net/sf/freecol/common/model/FreeColSpecObjectType.java,FreeColSpecObjectType,13,345,High,"Core data model (game objects, units, map, colony)"
+common/model,net/sf/freecol/common/model/Game.java,Game,92,1874,High,"Core data model (game objects, units, map, colony)"
+common/model,net/sf/freecol/common/model/GoldTradeItem.java,GoldTradeItem,11,198,High,"Core data model (game objects, units, map, colony)"
+common/model,net/sf/freecol/common/model/Goods.java,Goods,17,333,High,"Core data model (game objects, units, map, colony)"
+common/model,net/sf/freecol/common/model/GoodsContainer.java,GoodsContainer,27,712,High,"Core data model (game objects, units, map, colony)"
+common/model,net/sf/freecol/common/model/GoodsLocation.java,GoodsLocation,22,376,High,"Core data model (game objects, units, map, colony)"
+common/model,net/sf/freecol/common/model/GoodsTradeItem.java,GoodsTradeItem,11,230,High,"Core data model (game objects, units, map, colony)"
+common/model,net/sf/freecol/common/model/GoodsType.java,GoodsType,35,744,High,"Core data model (game objects, units, map, colony)"
+common/model,net/sf/freecol/common/model/HighScore.java,HighScore,24,647,High,"Core data model (game objects, units, map, colony)"
+common/model,net/sf/freecol/common/model/HighSeas.java,HighSeas,13,281,High,"Core data model (game objects, units, map, colony)"
+common/model,net/sf/freecol/common/model/HistoryEvent.java,HistoryEvent,14,318,High,"Core data model (game objects, units, map, colony)"
+common/model,net/sf/freecol/common/model/HitpointsCombatModel.java,HitpointsCombatModel,1,119,High,"Core data model (game objects, units, map, colony)"
+common/model,net/sf/freecol/common/model/InciteTradeItem.java,InciteTradeItem,10,201,High,"Core data model (game objects, units, map, colony)"
+common/model,net/sf/freecol/common/model/IndianNationType.java,IndianNationType,9,307,High,"Core data model (game objects, units, map, colony)"
+common/model,net/sf/freecol/common/model/IndianSettlement.java,IndianSettlement,77,1806,High,"Core data model (game objects, units, map, colony)"
+common/model,net/sf/freecol/common/model/LandMap.java,LandMap,5,446,High,"Core data model (game objects, units, map, colony)"
+common/model,net/sf/freecol/common/model/LastSale.java,LastSale,7,181,High,"Core data model (game objects, units, map, colony)"
+common/model,net/sf/freecol/common/model/Limit.java,Limit,14,397,High,"Core data model (game objects, units, map, colony)"
+common/model,net/sf/freecol/common/model/Locatable.java,Locatable,5,67,High,"Core data model (game objects, units, map, colony)"
+common/model,net/sf/freecol/common/model/Location.java,Location,21,216,High,"Core data model (game objects, units, map, colony)"
+common/model,net/sf/freecol/common/model/LostCityRumour.java,LostCityRumour,19,458,High,"Core data model (game objects, units, map, colony)"
+common/model,net/sf/freecol/common/model/Map.java,Map,107,2870,High,"Core data model (game objects, units, map, colony)"
+common/model,net/sf/freecol/common/model/Market.java,Market,34,625,High,"Core data model (game objects, units, map, colony)"
+common/model,net/sf/freecol/common/model/MarketData.java,MarketData,26,514,High,"Core data model (game objects, units, map, colony)"
+common/model,net/sf/freecol/common/model/MarketWas.java,MarketWas,3,117,High,"Core data model (game objects, units, map, colony)"
+common/model,net/sf/freecol/common/model/ModelMessage.java,ModelMessage,23,548,High,"Core data model (game objects, units, map, colony)"
+common/model,net/sf/freecol/common/model/Modifier.java,Modifier,25,680,High,"Core data model (game objects, units, map, colony)"
+common/model,net/sf/freecol/common/model/Monarch.java,Monarch,29,949,High,"Core data model (game objects, units, map, colony)"
+common/model,net/sf/freecol/common/model/Movable.java,Movable,2,44,High,"Core data model (game objects, units, map, colony)"
+common/model,net/sf/freecol/common/model/Nameable.java,Nameable,2,42,High,"Core data model (game objects, units, map, colony)"
+common/model,net/sf/freecol/common/model/Named.java,Named,1,37,High,"Core data model (game objects, units, map, colony)"
+common/model,net/sf/freecol/common/model/Nation.java,Nation,15,318,High,"Core data model (game objects, units, map, colony)"
+common/model,net/sf/freecol/common/model/NationOptions.java,NationOptions,13,351,High,"Core data model (game objects, units, map, colony)"
+common/model,net/sf/freecol/common/model/NationSummary.java,NationSummary,11,239,High,"Core data model (game objects, units, map, colony)"
+common/model,net/sf/freecol/common/model/NationType.java,NationType,13,315,High,"Core data model (game objects, units, map, colony)"
+common/model,net/sf/freecol/common/model/NativeTrade.java,NativeTrade,36,670,High,"Core data model (game objects, units, map, colony)"
+common/model,net/sf/freecol/common/model/NativeTradeItem.java,NativeTradeItem,12,258,High,"Core data model (game objects, units, map, colony)"
+common/model,net/sf/freecol/common/model/ObjectWas.java,ObjectWas,1,33,High,"Core data model (game objects, units, map, colony)"
+common/model,net/sf/freecol/common/model/Occupation.java,Occupation,4,185,High,"Core data model (game objects, units, map, colony)"
+common/model,net/sf/freecol/common/model/Operand.java,Operand,13,399,High,"Core data model (game objects, units, map, colony)"
+common/model,net/sf/freecol/common/model/Ownable.java,Ownable,2,45,High,"Core data model (game objects, units, map, colony)"
+common/model,net/sf/freecol/common/model/PathNode.java,PathNode,25,381,High,"Core data model (game objects, units, map, colony)"
+common/model,net/sf/freecol/common/model/Player.java,Player,250,4574,High,"Core data model (game objects, units, map, colony)"
+common/model,net/sf/freecol/common/model/PlunderType.java,PlunderType,3,113,High,"Core data model (game objects, units, map, colony)"
+common/model,net/sf/freecol/common/model/ProductionCache.java,ProductionCache,7,290,High,"Core data model (game objects, units, map, colony)"
+common/model,net/sf/freecol/common/model/ProductionInfo.java,ProductionInfo,17,189,High,"Core data model (game objects, units, map, colony)"
+common/model,net/sf/freecol/common/model/ProductionMap.java,ProductionMap,15,226,High,"Core data model (game objects, units, map, colony)"
+common/model,net/sf/freecol/common/model/ProductionType.java,ProductionType,24,586,High,"Core data model (game objects, units, map, colony)"
+common/model,net/sf/freecol/common/model/RandomRange.java,RandomRange,7,194,High,"Core data model (game objects, units, map, colony)"
+common/model,net/sf/freecol/common/model/Region.java,Region,37,688,High,"Core data model (game objects, units, map, colony)"
+common/model,net/sf/freecol/common/model/Resource.java,Resource,19,358,High,"Core data model (game objects, units, map, colony)"
+common/model,net/sf/freecol/common/model/ResourceType.java,ResourceType,5,136,High,"Core data model (game objects, units, map, colony)"
+common/model,net/sf/freecol/common/model/Role.java,Role,28,566,High,"Core data model (game objects, units, map, colony)"
+common/model,net/sf/freecol/common/model/Scope.java,Scope,21,430,High,"Core data model (game objects, units, map, colony)"
+common/model,net/sf/freecol/common/model/ScopeContainer.java,ScopeContainer,25,280,High,"Core data model (game objects, units, map, colony)"
+common/model,net/sf/freecol/common/model/Settlement.java,Settlement,51,928,High,"Core data model (game objects, units, map, colony)"
+common/model,net/sf/freecol/common/model/SettlementType.java,SettlementType,17,503,High,"Core data model (game objects, units, map, colony)"
+common/model,net/sf/freecol/common/model/SimpleCombatModel.java,SimpleCombatModel,7,897,High,"Core data model (game objects, units, map, colony)"
+common/model,net/sf/freecol/common/model/Specification.java,Specification,125,3303,High,"Core data model (game objects, units, map, colony)"
+common/model,net/sf/freecol/common/model/Stance.java,Stance,7,199,High,"Core data model (game objects, units, map, colony)"
+common/model,net/sf/freecol/common/model/StanceTradeItem.java,StanceTradeItem,11,215,High,"Core data model (game objects, units, map, colony)"
+common/model,net/sf/freecol/common/model/StringTemplate.java,StringTemplate,29,687,High,"Core data model (game objects, units, map, colony)"
+common/model,net/sf/freecol/common/model/Tension.java,Tension,11,212,High,"Core data model (game objects, units, map, colony)"
+common/model,net/sf/freecol/common/model/Tile.java,Tile,142,2865,High,"Core data model (game objects, units, map, colony)"
+common/model,net/sf/freecol/common/model/TileImprovement.java,TileImprovement,36,802,High,"Core data model (game objects, units, map, colony)"
+common/model,net/sf/freecol/common/model/TileImprovementStyle.java,TileImprovementStyle,4,122,High,"Core data model (game objects, units, map, colony)"
+common/model,net/sf/freecol/common/model/TileImprovementType.java,TileImprovementType,26,763,High,"Core data model (game objects, units, map, colony)"
+common/model,net/sf/freecol/common/model/TileItem.java,TileItem,16,233,High,"Core data model (game objects, units, map, colony)"
+common/model,net/sf/freecol/common/model/TileItemContainer.java,TileItemContainer,27,695,High,"Core data model (game objects, units, map, colony)"
+common/model,net/sf/freecol/common/model/TileType.java,TileType,24,740,High,"Core data model (game objects, units, map, colony)"
+common/model,net/sf/freecol/common/model/TileTypeChange.java,TileTypeChange,7,233,High,"Core data model (game objects, units, map, colony)"
+common/model,net/sf/freecol/common/model/TradeItem.java,TradeItem,23,312,High,"Core data model (game objects, units, map, colony)"
+common/model,net/sf/freecol/common/model/TradeLocation.java,TradeLocation,6,87,High,"Core data model (game objects, units, map, colony)"
+common/model,net/sf/freecol/common/model/TradeRoute.java,TradeRoute,24,486,High,"Core data model (game objects, units, map, colony)"
+common/model,net/sf/freecol/common/model/TradeRouteStop.java,TradeRouteStop,21,392,High,"Core data model (game objects, units, map, colony)"
+common/model,net/sf/freecol/common/model/TransactionListener.java,TransactionListener,2,47,High,"Core data model (game objects, units, map, colony)"
+common/model,net/sf/freecol/common/model/Turn.java,Turn,21,298,High,"Core data model (game objects, units, map, colony)"
+common/model,net/sf/freecol/common/model/TypeCountMap.java,TypeCountMap,12,109,High,"Core data model (game objects, units, map, colony)"
+common/model,net/sf/freecol/common/model/Unit.java,Unit,254,4983,High,"Core data model (game objects, units, map, colony)"
+common/model,net/sf/freecol/common/model/UnitChangeType.java,UnitChangeType,9,305,High,"Core data model (game objects, units, map, colony)"
+common/model,net/sf/freecol/common/model/UnitIterator.java,UnitIterator,6,148,High,"Core data model (game objects, units, map, colony)"
+common/model,net/sf/freecol/common/model/UnitLocation.java,UnitLocation,33,631,High,"Core data model (game objects, units, map, colony)"
+common/model,net/sf/freecol/common/model/UnitTradeItem.java,UnitTradeItem,11,204,High,"Core data model (game objects, units, map, colony)"
+common/model,net/sf/freecol/common/model/UnitType.java,UnitType,56,1058,High,"Core data model (game objects, units, map, colony)"
+common/model,net/sf/freecol/common/model/UnitTypeChange.java,UnitTypeChange,4,184,High,"Core data model (game objects, units, map, colony)"
+common/model,net/sf/freecol/common/model/UnitWas.java,UnitWas,8,278,High,"Core data model (game objects, units, map, colony)"
+common/model,net/sf/freecol/common/model/WorkLocation.java,WorkLocation,59,1028,High,"Core data model (game objects, units, map, colony)"
+common/model/mission,net/sf/freecol/common/model/mission/AbstractMission.java,AbstractMission,8,202,High,"Core data model (game objects, units, map, colony)"
+common/model/mission,net/sf/freecol/common/model/mission/CompoundMission.java,CompoundMission,7,212,High,"Core data model (game objects, units, map, colony)"
+common/model/mission,net/sf/freecol/common/model/mission/GoToMission.java,GoToMission,8,186,High,"Core data model (game objects, units, map, colony)"
+common/model/mission,net/sf/freecol/common/model/mission/ImprovementMission.java,ImprovementMission,6,170,High,"Core data model (game objects, units, map, colony)"
+common/model/mission,net/sf/freecol/common/model/mission/Mission.java,Mission,4,94,High,"Core data model (game objects, units, map, colony)"
+common/model/mission,net/sf/freecol/common/model/mission/MissionManager.java,MissionManager,2,98,High,"Core data model (game objects, units, map, colony)"
+common/model/pathfinding,net/sf/freecol/common/model/pathfinding/BaseCostDecider.java,BaseCostDecider,3,169,High,"Core data model (game objects, units, map, colony)"
+common/model/pathfinding,net/sf/freecol/common/model/pathfinding/CostDecider.java,CostDecider,3,66,High,"Core data model (game objects, units, map, colony)"
+common/model/pathfinding,net/sf/freecol/common/model/pathfinding/CostDeciders.java,CostDeciders,24,393,High,"Core data model (game objects, units, map, colony)"
+common/model/pathfinding,net/sf/freecol/common/model/pathfinding/GoalDecider.java,GoalDecider,3,78,High,"Core data model (game objects, units, map, colony)"
+common/model/pathfinding,net/sf/freecol/common/model/pathfinding/GoalDeciders.java,GoalDeciders,50,488,High,"Core data model (game objects, units, map, colony)"
+common/model/production,net/sf/freecol/common/model/production/BuildingProductionCalculator.java,BuildingProductionCalculator,2,377,High,"Core data model (game objects, units, map, colony)"
+common/model/production,net/sf/freecol/common/model/production/ProductionUtils.java,ProductionUtils,2,85,High,"Core data model (game objects, units, map, colony)"
+common/model/production,net/sf/freecol/common/model/production/TileProductionCalculator.java,TileProductionCalculator,9,328,High,"Core data model (game objects, units, map, colony)"
+common/model/production,net/sf/freecol/common/model/production/WorkerAssignment.java,WorkerAssignment,2,43,High,"Core data model (game objects, units, map, colony)"
+common/networking,net/sf/freecol/common/networking/AbandonColonyMessage.java,AbandonColonyMessage,3,105,Medium,Protocol message classes
+common/networking,net/sf/freecol/common/networking/AddPlayerMessage.java,AddPlayerMessage,4,146,Medium,Protocol message classes
+common/networking,net/sf/freecol/common/networking/AnimateAttackMessage.java,AnimateAttackMessage,3,243,Medium,Protocol message classes
+common/networking,net/sf/freecol/common/networking/AnimateMoveMessage.java,AnimateMoveMessage,3,193,Medium,Protocol message classes
+common/networking,net/sf/freecol/common/networking/AskSkillMessage.java,AskSkillMessage,3,126,Medium,Protocol message classes
+common/networking,net/sf/freecol/common/networking/AssignTeacherMessage.java,AssignTeacherMessage,3,128,Medium,Protocol message classes
+common/networking,net/sf/freecol/common/networking/AssignTradeRouteMessage.java,AssignTradeRouteMessage,4,123,Medium,Protocol message classes
+common/networking,net/sf/freecol/common/networking/AttackMessage.java,AttackMessage,3,136,Medium,Protocol message classes
+common/networking,net/sf/freecol/common/networking/AttackRangedMessage.java,AttackRangedMessage,3,130,Medium,Protocol message classes
+common/networking,net/sf/freecol/common/networking/AttributeMessage.java,AttributeMessage,3,160,Medium,Protocol message classes
+common/networking,net/sf/freecol/common/networking/BuildColonyMessage.java,BuildColonyMessage,3,123,Medium,Protocol message classes
+common/networking,net/sf/freecol/common/networking/CashInTreasureTrainMessage.java,CashInTreasureTrainMessage,3,106,Medium,Protocol message classes
+common/networking,net/sf/freecol/common/networking/ChangeSet.java,ChangeSet,87,1603,Medium,Protocol message classes
+common/networking,net/sf/freecol/common/networking/ChangeStateMessage.java,ChangeStateMessage,3,115,Medium,Protocol message classes
+common/networking,net/sf/freecol/common/networking/ChangeWorkImprovementTypeMessage.java,ChangeWorkImprovementTypeMessage,3,139,Medium,Protocol message classes
+common/networking,net/sf/freecol/common/networking/ChangeWorkTypeMessage.java,ChangeWorkTypeMessage,3,114,Medium,Protocol message classes
+common/networking,net/sf/freecol/common/networking/ChatMessage.java,ChatMessage,8,167,Medium,Protocol message classes
+common/networking,net/sf/freecol/common/networking/ChooseFoundingFatherMessage.java,ChooseFoundingFatherMessage,8,210,Medium,Protocol message classes
+common/networking,net/sf/freecol/common/networking/ClaimLandMessage.java,ClaimLandMessage,3,197,Medium,Protocol message classes
+common/networking,net/sf/freecol/common/networking/ClearSpecialityMessage.java,ClearSpecialityMessage,3,98,Medium,Protocol message classes
+common/networking,net/sf/freecol/common/networking/CloseMessage.java,CloseMessage,4,98,Medium,Protocol message classes
+common/networking,net/sf/freecol/common/networking/Connection.java,Connection,26,622,Medium,Protocol message classes
+common/networking,net/sf/freecol/common/networking/ConnectionVerificationMessage.java,ConnectionVerificationMessage,1,62,Medium,Protocol message classes
+common/networking,net/sf/freecol/common/networking/ContinueMessage.java,ContinueMessage,1,68,Medium,Protocol message classes
+common/networking,net/sf/freecol/common/networking/DeclareIndependenceMessage.java,DeclareIndependenceMessage,3,107,Medium,Protocol message classes
+common/networking,net/sf/freecol/common/networking/DeclineMoundsMessage.java,DeclineMoundsMessage,3,119,Medium,Protocol message classes
+common/networking,net/sf/freecol/common/networking/DeleteTradeRouteMessage.java,DeleteTradeRouteMessage,4,108,Medium,Protocol message classes
+common/networking,net/sf/freecol/common/networking/DeliverGiftMessage.java,DeliverGiftMessage,3,174,Medium,Protocol message classes
+common/networking,net/sf/freecol/common/networking/DemandTributeMessage.java,DemandTributeMessage,3,135,Medium,Protocol message classes
+common/networking,net/sf/freecol/common/networking/DiplomacyMessage.java,DiplomacyMessage,4,392,Medium,Protocol message classes
+common/networking,net/sf/freecol/common/networking/DisbandUnitMessage.java,DisbandUnitMessage,3,98,Medium,Protocol message classes
+common/networking,net/sf/freecol/common/networking/DisconnectMessage.java,DisconnectMessage,3,84,Medium,Protocol message classes
+common/networking,net/sf/freecol/common/networking/DisembarkMessage.java,DisembarkMessage,3,99,Medium,Protocol message classes
+common/networking,net/sf/freecol/common/networking/EmbarkMessage.java,EmbarkMessage,3,148,Medium,Protocol message classes
+common/networking,net/sf/freecol/common/networking/EmigrateUnitMessage.java,EmigrateUnitMessage,3,128,Medium,Protocol message classes
+common/networking,net/sf/freecol/common/networking/EndTurnMessage.java,EndTurnMessage,2,76,Medium,Protocol message classes
+common/networking,net/sf/freecol/common/networking/EnterRevengeModeMessage.java,EnterRevengeModeMessage,1,68,Medium,Protocol message classes
+common/networking,net/sf/freecol/common/networking/EquipForRoleMessage.java,EquipForRoleMessage,3,131,Medium,Protocol message classes
+common/networking,net/sf/freecol/common/networking/ErrorMessage.java,ErrorMessage,3,177,Medium,Protocol message classes
+common/networking,net/sf/freecol/common/networking/FeatureChangeMessage.java,FeatureChangeMessage,4,198,Medium,Protocol message classes
+common/networking,net/sf/freecol/common/networking/FirstContactMessage.java,FirstContactMessage,10,182,Medium,Protocol message classes
+common/networking,net/sf/freecol/common/networking/FountainOfYouthMessage.java,FountainOfYouthMessage,4,106,Medium,Protocol message classes
+common/networking,net/sf/freecol/common/networking/GameEndedMessage.java,GameEndedMessage,5,128,Medium,Protocol message classes
+common/networking,net/sf/freecol/common/networking/GameStateMessage.java,GameStateMessage,3,109,Medium,Protocol message classes
+common/networking,net/sf/freecol/common/networking/HighScoresMessage.java,HighScoresMessage,3,131,Medium,Protocol message classes
+common/networking,net/sf/freecol/common/networking/InciteMessage.java,InciteMessage,8,172,Medium,Protocol message classes
+common/networking,net/sf/freecol/common/networking/IndianDemandMessage.java,IndianDemandMessage,10,245,Medium,Protocol message classes
+common/networking,net/sf/freecol/common/networking/JoinColonyMessage.java,JoinColonyMessage,3,108,Medium,Protocol message classes
+common/networking,net/sf/freecol/common/networking/LearnSkillMessage.java,LearnSkillMessage,3,130,Medium,Protocol message classes
+common/networking,net/sf/freecol/common/networking/LoadGoodsMessage.java,LoadGoodsMessage,3,144,Medium,Protocol message classes
+common/networking,net/sf/freecol/common/networking/LoginMessage.java,LoginMessage,4,446,Medium,Protocol message classes
+common/networking,net/sf/freecol/common/networking/LogoutMessage.java,LogoutMessage,6,186,Medium,Protocol message classes
+common/networking,net/sf/freecol/common/networking/LootCargoMessage.java,LootCargoMessage,4,175,Medium,Protocol message classes
+common/networking,net/sf/freecol/common/networking/Message.java,Message,8,700,Medium,Protocol message classes
+common/networking,net/sf/freecol/common/networking/MessageHandler.java,MessageHandler,2,55,Medium,Protocol message classes
+common/networking,net/sf/freecol/common/networking/MissionaryMessage.java,MissionaryMessage,3,155,Medium,Protocol message classes
+common/networking,net/sf/freecol/common/networking/MonarchActionMessage.java,MonarchActionMessage,7,231,Medium,Protocol message classes
+common/networking,net/sf/freecol/common/networking/MoveMessage.java,MoveMessage,3,122,Medium,Protocol message classes
+common/networking,net/sf/freecol/common/networking/MoveToMessage.java,MoveToMessage,3,110,Medium,Protocol message classes
+common/networking,net/sf/freecol/common/networking/MultipleMessage.java,MultipleMessage,7,216,Medium,Protocol message classes
+common/networking,net/sf/freecol/common/networking/NationSummaryMessage.java,NationSummaryMessage,4,157,Medium,Protocol message classes
+common/networking,net/sf/freecol/common/networking/NativeGiftMessage.java,NativeGiftMessage,4,117,Medium,Protocol message classes
+common/networking,net/sf/freecol/common/networking/NativeTradeMessage.java,NativeTradeMessage,4,178,Medium,Protocol message classes
+common/networking,net/sf/freecol/common/networking/NetworkReplyObject.java,NetworkReplyObject,4,111,Medium,Protocol message classes
+common/networking,net/sf/freecol/common/networking/NewLandNameMessage.java,NewLandNameMessage,6,155,Medium,Protocol message classes
+common/networking,net/sf/freecol/common/networking/NewRegionNameMessage.java,NewRegionNameMessage,8,193,Medium,Protocol message classes
+common/networking,net/sf/freecol/common/networking/NewTradeRouteMessage.java,NewTradeRouteMessage,5,145,Medium,Protocol message classes
+common/networking,net/sf/freecol/common/networking/NewTurnMessage.java,NewTurnMessage,4,108,Medium,Protocol message classes
+common/networking,net/sf/freecol/common/networking/ObjectMessage.java,ObjectMessage,0,117,Medium,Protocol message classes
+common/networking,net/sf/freecol/common/networking/PartialMessage.java,PartialMessage,3,121,Medium,Protocol message classes
+common/networking,net/sf/freecol/common/networking/PayArrearsMessage.java,PayArrearsMessage,3,91,Medium,Protocol message classes
+common/networking,net/sf/freecol/common/networking/PayForBuildingMessage.java,PayForBuildingMessage,3,98,Medium,Protocol message classes
+common/networking,net/sf/freecol/common/networking/PutOutsideColonyMessage.java,PutOutsideColonyMessage,3,105,Medium,Protocol message classes
+common/networking,net/sf/freecol/common/networking/QuestionMessage.java,QuestionMessage,0,59,Medium,Protocol message classes
+common/networking,net/sf/freecol/common/networking/ReadyMessage.java,ReadyMessage,5,125,Medium,Protocol message classes
+common/networking,net/sf/freecol/common/networking/RearrangeColonyMessage.java,RearrangeColonyMessage,17,319,Medium,Protocol message classes
+common/networking,net/sf/freecol/common/networking/ReceivingThread.java,ReceivingThread,8,404,Medium,Protocol message classes
+common/networking,net/sf/freecol/common/networking/ReconnectMessage.java,ReconnectMessage,2,74,Medium,Protocol message classes
+common/networking,net/sf/freecol/common/networking/RegisterServerMessage.java,RegisterServerMessage,0,57,Medium,Protocol message classes
+common/networking,net/sf/freecol/common/networking/RemoveMessage.java,RemoveMessage,5,149,Medium,Protocol message classes
+common/networking,net/sf/freecol/common/networking/RemoveServerMessage.java,RemoveServerMessage,0,57,Medium,Protocol message classes
+common/networking,net/sf/freecol/common/networking/RenameMessage.java,RenameMessage,3,105,Medium,Protocol message classes
+common/networking,net/sf/freecol/common/networking/ReplyMessage.java,ReplyMessage,0,59,Medium,Protocol message classes
+common/networking,net/sf/freecol/common/networking/RequestLaunchMessage.java,RequestLaunchMessage,1,66,Medium,Protocol message classes
+common/networking,net/sf/freecol/common/networking/RetireMessage.java,RetireMessage,1,67,Medium,Protocol message classes
+common/networking,net/sf/freecol/common/networking/ScoutIndianSettlementMessage.java,ScoutIndianSettlementMessage,3,131,Medium,Protocol message classes
+common/networking,net/sf/freecol/common/networking/ScoutSpeakToChiefMessage.java,ScoutSpeakToChiefMessage,8,170,Medium,Protocol message classes
+common/networking,net/sf/freecol/common/networking/ServerAPI.java,ServerAPI,82,1077,Medium,Protocol message classes
+common/networking,net/sf/freecol/common/networking/ServerInfoMessage.java,ServerInfoMessage,4,122,Medium,Protocol message classes
+common/networking,net/sf/freecol/common/networking/ServerListMessage.java,ServerListMessage,4,121,Medium,Protocol message classes
+common/networking,net/sf/freecol/common/networking/SetAIMessage.java,SetAIMessage,5,119,Medium,Protocol message classes
+common/networking,net/sf/freecol/common/networking/SetAvailableMessage.java,SetAvailableMessage,5,128,Medium,Protocol message classes
+common/networking,net/sf/freecol/common/networking/SetBuildQueueMessage.java,SetBuildQueueMessage,3,156,Medium,Protocol message classes
+common/networking,net/sf/freecol/common/networking/SetColorMessage.java,SetColorMessage,5,149,Medium,Protocol message classes
+common/networking,net/sf/freecol/common/networking/SetCurrentPlayerMessage.java,SetCurrentPlayerMessage,4,115,Medium,Protocol message classes
+common/networking,net/sf/freecol/common/networking/SetCurrentStopMessage.java,SetCurrentStopMessage,2,112,Medium,Protocol message classes
+common/networking,net/sf/freecol/common/networking/SetDeadMessage.java,SetDeadMessage,4,107,Medium,Protocol message classes
+common/networking,net/sf/freecol/common/networking/SetDestinationMessage.java,SetDestinationMessage,2,100,Medium,Protocol message classes
+common/networking,net/sf/freecol/common/networking/SetGoodsLevelsMessage.java,SetGoodsLevelsMessage,3,137,Medium,Protocol message classes
+common/networking,net/sf/freecol/common/networking/SetNationMessage.java,SetNationMessage,5,151,Medium,Protocol message classes
+common/networking,net/sf/freecol/common/networking/SetNationTypeMessage.java,SetNationTypeMessage,5,151,Medium,Protocol message classes
+common/networking,net/sf/freecol/common/networking/SetStanceMessage.java,SetStanceMessage,6,140,Medium,Protocol message classes
+common/networking,net/sf/freecol/common/networking/SpySettlementMessage.java,SpySettlementMessage,4,191,Medium,Protocol message classes
+common/networking,net/sf/freecol/common/networking/StartGameMessage.java,StartGameMessage,2,74,Medium,Protocol message classes
+common/networking,net/sf/freecol/common/networking/TrainUnitInEuropeMessage.java,TrainUnitInEuropeMessage,3,96,Medium,Protocol message classes
+common/networking,net/sf/freecol/common/networking/TrivialMessage.java,TrivialMessage,6,231,Medium,Protocol message classes
+common/networking,net/sf/freecol/common/networking/UnloadGoodsMessage.java,UnloadGoodsMessage,3,127,Medium,Protocol message classes
+common/networking,net/sf/freecol/common/networking/UpdateGameOptionsMessage.java,UpdateGameOptionsMessage,3,143,Medium,Protocol message classes
+common/networking,net/sf/freecol/common/networking/UpdateMapGeneratorOptionsMessage.java,UpdateMapGeneratorOptionsMessage,3,142,Medium,Protocol message classes
+common/networking,net/sf/freecol/common/networking/UpdateMessage.java,UpdateMessage,5,169,Medium,Protocol message classes
+common/networking,net/sf/freecol/common/networking/UpdateServerMessage.java,UpdateServerMessage,0,57,Medium,Protocol message classes
+common/networking,net/sf/freecol/common/networking/UpdateTradeRouteMessage.java,UpdateTradeRouteMessage,2,117,Medium,Protocol message classes
+common/networking,net/sf/freecol/common/networking/VacantPlayersMessage.java,VacantPlayersMessage,5,116,Medium,Protocol message classes
+common/networking,net/sf/freecol/common/networking/WorkMessage.java,WorkMessage,3,129,Medium,Protocol message classes
+common/networking,net/sf/freecol/common/networking/WrapperMessage.java,WrapperMessage,7,156,Medium,Protocol message classes
+common/option,net/sf/freecol/common/option/AbstractOption.java,AbstractOption,8,308,Medium,Option framework
+common/option,net/sf/freecol/common/option/AbstractUnitOption.java,AbstractUnitOption,13,337,Medium,Option framework
+common/option,net/sf/freecol/common/option/AudioMixerOption.java,AudioMixerOption,13,270,Medium,Option framework
+common/option,net/sf/freecol/common/option/BooleanOption.java,BooleanOption,5,144,Medium,Option framework
+common/option,net/sf/freecol/common/option/FileOption.java,FileOption,8,200,Medium,Option framework
+common/option,net/sf/freecol/common/option/FullscreenDisplayModeOption.java,FullscreenDisplayModeOption,14,235,Medium,Option framework
+common/option,net/sf/freecol/common/option/GameOptions.java,GameOptions,1,547,Medium,Option framework
+common/option,net/sf/freecol/common/option/IntegerOption.java,IntegerOption,14,302,Medium,Option framework
+common/option,net/sf/freecol/common/option/LanguageOption.java,LanguageOption,14,306,Medium,Option framework
+common/option,net/sf/freecol/common/option/ListOption.java,ListOption,15,336,Medium,Option framework
+common/option,net/sf/freecol/common/option/MapGeneratorOptions.java,MapGeneratorOptions,1,152,Medium,Option framework
+common/option,net/sf/freecol/common/option/ModListOption.java,ModListOption,2,76,Medium,Option framework
+common/option,net/sf/freecol/common/option/ModOption.java,ModOption,9,186,Medium,Option framework
+common/option,net/sf/freecol/common/option/Option.java,Option,9,100,Medium,Option framework
+common/option,net/sf/freecol/common/option/OptionContainer.java,OptionContainer,2,257,Medium,Option framework
+common/option,net/sf/freecol/common/option/OptionGroup.java,OptionGroup,28,622,Medium,Option framework
+common/option,net/sf/freecol/common/option/PercentageOption.java,PercentageOption,2,81,Medium,Option framework
+common/option,net/sf/freecol/common/option/RangeOption.java,RangeOption,4,119,Medium,Option framework
+common/option,net/sf/freecol/common/option/SelectOption.java,SelectOption,10,290,Medium,Option framework
+common/option,net/sf/freecol/common/option/StringOption.java,StringOption,7,220,Medium,Option framework
+common/option,net/sf/freecol/common/option/TextOption.java,TextOption,5,144,Medium,Option framework
+common/option,net/sf/freecol/common/option/UnitListOption.java,UnitListOption,2,73,Medium,Option framework
+common/option,net/sf/freecol/common/option/UnitTypeOption.java,UnitTypeOption,10,324,Medium,Option framework
+common/resources,net/sf/freecol/common/resources/AudioResource.java,AudioResource,3,90,Low,"Resource loading (images, audio, fonts)"
+common/resources,net/sf/freecol/common/resources/ColorResource.java,ColorResource,2,128,Low,"Resource loading (images, audio, fonts)"
+common/resources,net/sf/freecol/common/resources/FAFile.java,FAFile,4,287,Low,"Resource loading (images, audio, fonts)"
+common/resources,net/sf/freecol/common/resources/FAFileResource.java,FAFileResource,2,73,Low,"Resource loading (images, audio, fonts)"
+common/resources,net/sf/freecol/common/resources/FontResource.java,FontResource,3,118,Low,"Resource loading (images, audio, fonts)"
+common/resources,net/sf/freecol/common/resources/ImageCache.java,ImageCache,13,326,Low,"Resource loading (images, audio, fonts)"
+common/resources,net/sf/freecol/common/resources/ImageResource.java,ImageResource,15,374,Low,"Resource loading (images, audio, fonts)"
+common/resources,net/sf/freecol/common/resources/PropertyList.java,PropertyList,3,59,Low,"Resource loading (images, audio, fonts)"
+common/resources,net/sf/freecol/common/resources/Resource.java,Resource,4,108,Low,"Resource loading (images, audio, fonts)"
+common/resources,net/sf/freecol/common/resources/ResourceFactory.java,ResourceFactory,1,108,Low,"Resource loading (images, audio, fonts)"
+common/resources,net/sf/freecol/common/resources/ResourceManager.java,ResourceManager,31,481,Low,"Resource loading (images, audio, fonts)"
+common/resources,net/sf/freecol/common/resources/ResourceMapping.java,ResourceMapping,15,334,Low,"Resource loading (images, audio, fonts)"
+common/resources,net/sf/freecol/common/resources/SZAResource.java,SZAResource,3,101,Low,"Resource loading (images, audio, fonts)"
+common/resources,net/sf/freecol/common/resources/StringResource.java,StringResource,2,69,Low,"Resource loading (images, audio, fonts)"
+common/resources,net/sf/freecol/common/resources/Video.java,Video,1,45,Low,"Resource loading (images, audio, fonts)"
+common/resources,net/sf/freecol/common/resources/VideoResource.java,VideoResource,2,65,Low,"Resource loading (images, audio, fonts)"
+common/sound,net/sf/freecol/common/sound/OggVorbisDecoderFactory.java,OggVorbisDecoderFactory,21,461,Low,Sound playback
+common/sound,net/sf/freecol/common/sound/SoundPlayer.java,SoundPlayer,10,445,Low,Sound playback
+common/util,net/sf/freecol/common/util/CachingFunction.java,CachingFunction,1,68,High,Shared utility methods used everywhere
+common/util,net/sf/freecol/common/util/CollectionUtils.java,CollectionUtils,155,2608,High,Shared utility methods used everywhere
+common/util,net/sf/freecol/common/util/ImageUtils.java,ImageUtils,14,351,High,Shared utility methods used everywhere
+common/util,net/sf/freecol/common/util/Introspector.java,Introspector,11,448,High,Shared utility methods used everywhere
+common/util,net/sf/freecol/common/util/LogBuilder.java,LogBuilder,11,224,High,Shared utility methods used everywhere
+common/util,net/sf/freecol/common/util/OSUtils.java,OSUtils,4,123,High,Shared utility methods used everywhere
+common/util,net/sf/freecol/common/util/RandomChoice.java,RandomChoice,6,97,High,Shared utility methods used everywhere
+common/util,net/sf/freecol/common/util/RandomUtils.java,RandomUtils,11,219,High,Shared utility methods used everywhere
+common/util,net/sf/freecol/common/util/StringUtils.java,StringUtils,12,283,High,Shared utility methods used everywhere
+common/util,net/sf/freecol/common/util/Utils.java,Utils,20,421,High,Shared utility methods used everywhere
+metaserver,net/sf/freecol/metaserver/MetaRegister.java,MetaRegister,6,206,Medium,Meta-server process
+metaserver,net/sf/freecol/metaserver/MetaServer.java,MetaServer,6,170,Medium,Meta-server process
+metaserver,net/sf/freecol/metaserver/MetaServerHandler.java,MetaServerHandler,2,173,Medium,Meta-server process
+server,net/sf/freecol/server/FreeColServer.java,FreeColServer,48,1404,Medium,Server root (FreeColServer)
+server/ai,net/sf/freecol/server/ai/AIColony.java,AIColony,26,1564,High,"AI decision logic, missions, colony planning"
+server/ai,net/sf/freecol/server/ai/AIGoods.java,AIGoods,24,492,High,"AI decision logic, missions, colony planning"
+server/ai,net/sf/freecol/server/ai/AIInGameInputHandler.java,AIInGameInputHandler,2,98,High,"AI decision logic, missions, colony planning"
+server/ai,net/sf/freecol/server/ai/AIMain.java,AIMain,21,666,High,"AI decision logic, missions, colony planning"
+server/ai,net/sf/freecol/server/ai/AIMessage.java,AIMessage,38,562,High,"AI decision logic, missions, colony planning"
+server/ai,net/sf/freecol/server/ai/AIObject.java,AIObject,11,231,High,"AI decision logic, missions, colony planning"
+server/ai,net/sf/freecol/server/ai/AIPlayer.java,AIPlayer,35,692,High,"AI decision logic, missions, colony planning"
+server/ai,net/sf/freecol/server/ai/AIServerAPI.java,AIServerAPI,4,80,High,"AI decision logic, missions, colony planning"
+server/ai,net/sf/freecol/server/ai/AIUnit.java,AIUnit,48,970,High,"AI decision logic, missions, colony planning"
+server/ai,net/sf/freecol/server/ai/Cargo.java,Cargo,41,758,High,"AI decision logic, missions, colony planning"
+server/ai,net/sf/freecol/server/ai/ColonyPlan.java,ColonyPlan,14,1523,High,"AI decision logic, missions, colony planning"
+server/ai,net/sf/freecol/server/ai/EuropeanAIPlayer.java,EuropeanAIPlayer,38,3035,High,"AI decision logic, missions, colony planning"
+server/ai,net/sf/freecol/server/ai/GoodsWish.java,GoodsWish,13,298,High,"AI decision logic, missions, colony planning"
+server/ai,net/sf/freecol/server/ai/MissionAIPlayer.java,MissionAIPlayer,12,384,High,"AI decision logic, missions, colony planning"
+server/ai,net/sf/freecol/server/ai/NativeAIPlayer.java,NativeAIPlayer,11,986,High,"AI decision logic, missions, colony planning"
+server/ai,net/sf/freecol/server/ai/REFAIPlayer.java,REFAIPlayer,12,974,High,"AI decision logic, missions, colony planning"
+server/ai,net/sf/freecol/server/ai/TileImprovementPlan.java,TileImprovementPlan,17,399,High,"AI decision logic, missions, colony planning"
+server/ai,net/sf/freecol/server/ai/TransportableAIObject.java,TransportableAIObject,23,414,High,"AI decision logic, missions, colony planning"
+server/ai,net/sf/freecol/server/ai/ValuedAIObject.java,ValuedAIObject,4,149,High,"AI decision logic, missions, colony planning"
+server/ai,net/sf/freecol/server/ai/Wish.java,Wish,11,251,High,"AI decision logic, missions, colony planning"
+server/ai,net/sf/freecol/server/ai/WorkLocationPlan.java,WorkLocationPlan,7,139,High,"AI decision logic, missions, colony planning"
+server/ai,net/sf/freecol/server/ai/WorkerWish.java,WorkerWish,10,266,High,"AI decision logic, missions, colony planning"
+server/ai/colony,net/sf/freecol/server/ai/colony/ColonyPlan.java,ColonyPlan,4,78,High,"AI decision logic, missions, colony planning"
+server/ai/colony,net/sf/freecol/server/ai/colony/ColonyPlanner.java,ColonyPlanner,0,40,High,"AI decision logic, missions, colony planning"
+server/ai/colony,net/sf/freecol/server/ai/colony/PlannedWorkLocation.java,PlannedWorkLocation,3,59,High,"AI decision logic, missions, colony planning"
+server/ai/colony,net/sf/freecol/server/ai/colony/StandardColonyPlanner.java,StandardColonyPlanner,22,1019,High,"AI decision logic, missions, colony planning"
+server/ai/colony,net/sf/freecol/server/ai/colony/TentativeColonyPlan.java,TentativeColonyPlan,42,522,High,"AI decision logic, missions, colony planning"
+server/ai/colony,net/sf/freecol/server/ai/colony/TileImprovementPlan.java,TileImprovementPlan,3,33,High,"AI decision logic, missions, colony planning"
+server/ai/colony,net/sf/freecol/server/ai/colony/Utils.java,Utils,1,8,High,"AI decision logic, missions, colony planning"
+server/ai/colony,net/sf/freecol/server/ai/colony/WorkerPlan.java,WorkerPlan,4,44,High,"AI decision logic, missions, colony planning"
+server/ai/colony/plan,net/sf/freecol/server/ai/colony/plan/InitialSteps.java,InitialSteps,3,80,High,"AI decision logic, missions, colony planning"
+server/ai/colony/plan,net/sf/freecol/server/ai/colony/plan/ProduceRawAndManufactoredUnstorableBuildingMaterialsStep.java,ProduceRawAndManufactoredUnstorableBuildingMaterialsStep,0,212,High,"AI decision logic, missions, colony planning"
+server/ai/military,net/sf/freecol/server/ai/military/DefensiveMap.java,DefensiveMap,10,280,High,"AI decision logic, missions, colony planning"
+server/ai/military,net/sf/freecol/server/ai/military/DefensiveZone.java,DefensiveZone,17,179,High,"AI decision logic, missions, colony planning"
+server/ai/military,net/sf/freecol/server/ai/military/MilitaryCoordinator.java,MilitaryCoordinator,2,479,High,"AI decision logic, missions, colony planning"
+server/ai/mission,net/sf/freecol/server/ai/mission/BuildColonyMission.java,BuildColonyMission,15,565,High,"AI decision logic, missions, colony planning"
+server/ai/mission,net/sf/freecol/server/ai/mission/CashInTreasureTrainMission.java,CashInTreasureTrainMission,15,487,High,"AI decision logic, missions, colony planning"
+server/ai/mission,net/sf/freecol/server/ai/mission/DefendSettlementMission.java,DefendSettlementMission,14,466,High,"AI decision logic, missions, colony planning"
+server/ai/mission,net/sf/freecol/server/ai/mission/EscortUnitMission.java,EscortUnitMission,10,289,High,"AI decision logic, missions, colony planning"
+server/ai/mission,net/sf/freecol/server/ai/mission/IdleAtSettlementMission.java,IdleAtSettlementMission,8,190,High,"AI decision logic, missions, colony planning"
+server/ai/mission,net/sf/freecol/server/ai/mission/IndianBringGiftMission.java,IndianBringGiftMission,10,361,High,"AI decision logic, missions, colony planning"
+server/ai/mission,net/sf/freecol/server/ai/mission/IndianDemandMission.java,IndianDemandMission,10,495,High,"AI decision logic, missions, colony planning"
+server/ai/mission,net/sf/freecol/server/ai/mission/Mission.java,Mission,27,1076,High,"AI decision logic, missions, colony planning"
+server/ai/mission,net/sf/freecol/server/ai/mission/MissionaryMission.java,MissionaryMission,15,448,High,"AI decision logic, missions, colony planning"
+server/ai/mission,net/sf/freecol/server/ai/mission/PioneeringMission.java,PioneeringMission,19,802,High,"AI decision logic, missions, colony planning"
+server/ai/mission,net/sf/freecol/server/ai/mission/PrivateerMission.java,PrivateerMission,14,479,High,"AI decision logic, missions, colony planning"
+server/ai/mission,net/sf/freecol/server/ai/mission/ScoutingMission.java,ScoutingMission,16,553,High,"AI decision logic, missions, colony planning"
+server/ai/mission,net/sf/freecol/server/ai/mission/TransportMission.java,TransportMission,25,1641,High,"AI decision logic, missions, colony planning"
+server/ai/mission,net/sf/freecol/server/ai/mission/UnitSeekAndDestroyMission.java,UnitSeekAndDestroyMission,16,579,High,"AI decision logic, missions, colony planning"
+server/ai/mission,net/sf/freecol/server/ai/mission/UnitWanderHostileMission.java,UnitWanderHostileMission,9,197,High,"AI decision logic, missions, colony planning"
+server/ai/mission,net/sf/freecol/server/ai/mission/UnitWanderMission.java,UnitWanderMission,7,133,High,"AI decision logic, missions, colony planning"
+server/ai/mission,net/sf/freecol/server/ai/mission/WishRealizationMission.java,WishRealizationMission,10,275,High,"AI decision logic, missions, colony planning"
+server/ai/mission,net/sf/freecol/server/ai/mission/WorkInsideColonyMission.java,WorkInsideColonyMission,9,220,High,"AI decision logic, missions, colony planning"
+server/control,net/sf/freecol/server/control/Controller.java,Controller,1,58,High,Server-side command handling
+server/control,net/sf/freecol/server/control/FreeColServerHolder.java,FreeColServerHolder,0,62,High,Server-side command handling
+server/control,net/sf/freecol/server/control/InGameController.java,InGameController,79,3957,High,Server-side command handling
+server/control,net/sf/freecol/server/control/PreGameController.java,PreGameController,9,271,High,Server-side command handling
+server/control,net/sf/freecol/server/control/ServerInputHandler.java,ServerInputHandler,2,79,High,Server-side command handling
+server/control,net/sf/freecol/server/control/UserConnectionHandler.java,UserConnectionHandler,2,82,High,Server-side command handling
+server/generator,net/sf/freecol/server/generator/ColonizationMapLoader.java,ColonizationMapLoader,2,213,Medium,Map generation
+server/generator,net/sf/freecol/server/generator/EuropeanStartingPositionsGenerator.java,EuropeanStartingPositionsGenerator,0,617,Medium,Map generation
+server/generator,net/sf/freecol/server/generator/FreeColMapLoader.java,FreeColMapLoader,2,150,Medium,Map generation
+server/generator,net/sf/freecol/server/generator/MapGenerator.java,MapGenerator,2,54,Medium,Map generation
+server/generator,net/sf/freecol/server/generator/MapLayerGenerator.java,MapLayerGenerator,2,46,Medium,Map generation
+server/generator,net/sf/freecol/server/generator/MapLoader.java,MapLoader,2,48,Medium,Map generation
+server/generator,net/sf/freecol/server/generator/River.java,River,8,441,Medium,Map generation
+server/generator,net/sf/freecol/server/generator/RiverSection.java,RiverSection,7,165,Medium,Map generation
+server/generator,net/sf/freecol/server/generator/SimpleMapGenerator.java,SimpleMapGenerator,2,631,Medium,Map generation
+server/generator,net/sf/freecol/server/generator/TerrainGenerator.java,TerrainGenerator,2,954,Medium,Map generation
+server/model,net/sf/freecol/server/model/DiplomacySession.java,DiplomacySession,14,354,High,Server-side game-state and session classes
+server/model,net/sf/freecol/server/model/LootSession.java,LootSession,2,52,High,Server-side game-state and session classes
+server/model,net/sf/freecol/server/model/MonarchSession.java,MonarchSession,7,151,High,Server-side game-state and session classes
+server/model,net/sf/freecol/server/model/NativeDemandSession.java,NativeDemandSession,3,159,High,Server-side game-state and session classes
+server/model,net/sf/freecol/server/model/NativeTradeSession.java,NativeTradeSession,4,108,High,Server-side game-state and session classes
+server/model,net/sf/freecol/server/model/ServerBuilding.java,ServerBuilding,3,272,High,Server-side game-state and session classes
+server/model,net/sf/freecol/server/model/ServerColony.java,ServerColony,9,928,High,Server-side game-state and session classes
+server/model,net/sf/freecol/server/model/ServerColonyTile.java,ServerColonyTile,1,130,High,Server-side game-state and session classes
+server/model,net/sf/freecol/server/model/ServerEurope.java,ServerEurope,9,305,High,Server-side game-state and session classes
+server/model,net/sf/freecol/server/model/ServerGame.java,ServerGame,16,733,High,Server-side game-state and session classes
+server/model,net/sf/freecol/server/model/ServerIndianSettlement.java,ServerIndianSettlement,11,605,High,Server-side game-state and session classes
+server/model,net/sf/freecol/server/model/ServerPlayer.java,ServerPlayer,62,4666,High,Server-side game-state and session classes
+server/model,net/sf/freecol/server/model/ServerRegion.java,ServerRegion,10,645,High,Server-side game-state and session classes
+server/model,net/sf/freecol/server/model/ServerUnit.java,ServerUnit,8,1141,High,Server-side game-state and session classes
+server/model,net/sf/freecol/server/model/Session.java,Session,9,251,High,Server-side game-state and session classes
+server/model,net/sf/freecol/server/model/TimedSession.java,TimedSession,2,87,High,Server-side game-state and session classes
+server/model,net/sf/freecol/server/model/TurnTaker.java,TurnTaker,1,41,High,Server-side game-state and session classes
+server/networking,net/sf/freecol/server/networking/DummyConnection.java,DummyConnection,7,120,Medium,Server-side connection handling
+server/networking,net/sf/freecol/server/networking/Server.java,Server,12,313,Medium,Server-side connection handling
+tools,net/sf/freecol/tools/ColonizationMapReader.java,ColonizationMapReader,1,191,Medium,Build-time / conversion utilities
+tools,net/sf/freecol/tools/ColonizationSaveGameReader.java,ColonizationSaveGameReader,11,233,Medium,Build-time / conversion utilities
+tools,net/sf/freecol/tools/DesktopEntry.java,DesktopEntry,2,131,Medium,Build-time / conversion utilities
+tools,net/sf/freecol/tools/FSGConverter.java,FSGConverter,2,212,Medium,Build-time / conversion utilities
+tools,net/sf/freecol/tools/FlagTest.java,FlagTest,3,262,Medium,Build-time / conversion utilities
+tools,net/sf/freecol/tools/ForestMaker.java,ForestMaker,5,324,Medium,Build-time / conversion utilities
+tools,net/sf/freecol/tools/GenerateDocumentation.java,GenerateDocumentation,5,258,Medium,Build-time / conversion utilities
+tools,net/sf/freecol/tools/InstallerTranslations.java,InstallerTranslations,2,248,Medium,Build-time / conversion utilities
+tools,net/sf/freecol/tools/MapConverter.java,MapConverter,1,88,Medium,Build-time / conversion utilities
+tools,net/sf/freecol/tools/MergeTranslations.java,MergeTranslations,2,134,Medium,Build-time / conversion utilities
+tools,net/sf/freecol/tools/RiverMaker.java,RiverMaker,1,180,Medium,Build-time / conversion utilities
+tools,net/sf/freecol/tools/SaveGameValidator.java,SaveGameValidator,1,88,Medium,Build-time / conversion utilities
+tools,net/sf/freecol/tools/Texture2Tile.java,Texture2Tile,2,245,Medium,Build-time / conversion utilities
+tools,net/sf/freecol/tools/TranslationReport.java,TranslationReport,2,279,Medium,Build-time / conversion utilities

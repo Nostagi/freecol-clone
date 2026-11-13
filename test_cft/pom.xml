@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  test_cft = a standard Maven module that
+    * compiles FreeCol production code READ-ONLY from ../src      (main source root)
+    * compiles our new CFG-driven tests from src/test/java        (test source root)
+    * compiles optional CFG-extractor code from src/tools/java    (extra test source root)
+    * runs tests with working dir = repository root (FreeCol reads ./data and ./test/data)
+    * measures coverage with JaCoCo restricted to High-priority packages
+
+  Everything: `mvn -f test_cft/pom.xml verify`      (see README.md)
+  NOTE: this build has NOT been executed yet; first-run adjustments may be needed.
+-->
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>freecol.testcft</groupId>
+  <artifactId>freecol-cft</artifactId>
+  <version>1.0</version>
+  <packaging>jar</packaging>
+
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <maven.compiler.release>11</maven.compiler.release>
+    <repo.root>${project.basedir}/..</repo.root>
+    <jacoco.version>0.8.12</jacoco.version>
+    <asm.version>9.7</asm.version>
+    <soot.version>4.5.0</soot.version>
+    <junit.version>4.13.2</junit.version>
+    <!-- Used by jacoco prepare-agent when surefire has no explicit value -->
+    <argLine></argLine>
+  </properties>
+
+  <dependencies>
+    <!-- FreeCol's own runtime jars (already in the repository) -->
+    <dependency><groupId>local</groupId><artifactId>commons-cli</artifactId><version>1.4</version><scope>system</scope><systemPath>${repo.root}/jars/commons-cli-1.4.jar</systemPath></dependency>
+    <dependency><groupId>local</groupId><artifactId>cortado</artifactId><version>0.6.0</version><scope>system</scope><systemPath>${repo.root}/jars/cortado-0.6.0.jar</systemPath></dependency>
+    <dependency><groupId>local</groupId><artifactId>findbugs-annotations</artifactId><version>1</version><scope>system</scope><systemPath>${repo.root}/jars/findbugs-annotations.jar</systemPath></dependency>
+    <dependency><groupId>local</groupId><artifactId>jogg</artifactId><version>0.0.17</version><scope>system</scope><systemPath>${repo.root}/jars/jogg-0.0.17.jar</systemPath></dependency>
+    <dependency><groupId>local</groupId><artifactId>jorbis</artifactId><version>0.0.17</version><scope>system</scope><systemPath>${repo.root}/jars/jorbis-0.0.17.jar</systemPath></dependency>
+    <dependency><groupId>local</groupId><artifactId>miglayout-core</artifactId><version>5.3</version><scope>system</scope><systemPath>${repo.root}/jars/miglayout-core-5.3.jar</systemPath></dependency>
+    <dependency><groupId>local</groupId><artifactId>miglayout-swing</artifactId><version>5.3</version><scope>system</scope><systemPath>${repo.root}/jars/miglayout-swing-5.3.jar</systemPath></dependency>
+
+    <!-- Test runner -->
+    <dependency><groupId>junit</groupId><artifactId>junit</artifactId><version>${junit.version}</version><scope>test</scope></dependency>
+
+    <!-- CFG extraction tooling (code in src/tools/java). ASM is the default; Soot is optional (delete if unused). -->
+    <dependency><groupId>org.ow2.asm</groupId><artifactId>asm</artifactId><version>${asm.version}</version><scope>test</scope></dependency>
+    <dependency><groupId>org.ow2.asm</groupId><artifactId>asm-tree</artifactId><version>${asm.version}</version><scope>test</scope></dependency>
+    <dependency><groupId>org.ow2.asm</groupId><artifactId>asm-analysis</artifactId><version>${asm.version}</version><scope>test</scope></dependency>
+    <dependency><groupId>org.ow2.asm</groupId><artifactId>asm-util</artifactId><version>${asm.version}</version><scope>test</scope></dependency>
+    <dependency><groupId>org.soot-oss</groupId><artifactId>soot</artifactId><version>${soot.version}</version><scope>test</scope></dependency>
+  </dependencies>
+
+  <build>
+    <!-- main source root: FreeCol production code, shared with the main project, never edited from here -->
+    <sourceDirectory>${repo.root}/src</sourceDirectory>
+    <!-- test source root: all new tests + copied fixtures -->
+    <testSourceDirectory>${project.basedir}/src/test/java</testSourceDirectory>
+    <testResources><testResource><directory>${project.basedir}/src/test/resources</directory></testResource></testResources>
+
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <version>3.13.0</version>
+        <configuration>
+          <release>11</release>
+          <debug>true</debug>
+          <debuglevel>lines,vars,source</debuglevel>   <!-- needed by JaCoCo + CFG line mapping -->
+        </configuration>
+      </plugin>
+
+      <!-- extra test source root for CFG extractor code -->
+      <plugin>
+        <groupId>org.codehaus.mojo</groupId>
+        <artifactId>build-helper-maven-plugin</artifactId>
+        <version>3.5.0</version>
+        <executions>
+          <execution>
+            <id>add-tools-source</id>
+            <phase>generate-test-sources</phase>
+            <goals><goal>add-test-source</goal></goals>
+            <configuration><sources><source>${project.basedir}/src/tools/java</source></sources></configuration>
+          </execution>
+        </executions>
+      </plugin>
+
+      <plugin>
+        <groupId>org.jacoco</groupId>
+        <artifactId>jacoco-maven-plugin</artifactId>
+        <version>${jacoco.version}</version>
+        <configuration>
+          <includes><include>net/sf/freecol/**</include></includes>
+        </configuration>
+        <executions>
+          <execution><id>agent</id><goals><goal>prepare-agent</goal></goals></execution>
+          <execution>
+            <id>report</id>
+            <phase>verify</phase>
+            <goals><goal>report</goal></goals>
+            <configuration>
+              <outputDirectory>${project.basedir}/reports/jacoco</outputDirectory>
+              <!-- High-priority scope only (kept in sync with config/high_priority_packages.txt) -->
+              <includes>
+                <include>net/sf/freecol/FreeCol*.class</include>
+                <include>net/sf/freecol/client/control/**</include>
+                <include>net/sf/freecol/common/model/**</include>
+                <include>net/sf/freecol/common/util/**</include>
+                <include>net/sf/freecol/server/ai/**</include>
+                <include>net/sf/freecol/server/control/**</include>
+                <include>net/sf/freecol/server/model/**</include>
+              </includes>
+            </configuration>
+          </execution>
+        </executions>
+      </plugin>
+
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-surefire-plugin</artifactId>
+        <version>3.2.5</version>
+        <configuration>
+          <!-- FreeCol resolves "data/..." and "test/data/..." relative to the repository root -->
+          <workingDirectory>${repo.root}</workingDirectory>
+          <argLine>@{argLine} -Djava.awt.headless=true</argLine>
+          <includes><include>**/*CfgTest.java</include></includes>
+          <reportsDirectory>${project.basedir}/reports/surefire</reportsDirectory>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
+</project>
