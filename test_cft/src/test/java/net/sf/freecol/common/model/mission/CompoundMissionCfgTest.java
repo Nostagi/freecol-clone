@@ -13,6 +13,11 @@ import java.util.List;
 
 import javax.xml.stream.XMLStreamException;
 
+import org.junit.Before;
+import org.junit.Test;
+import org.junit.runner.RunWith;
+import org.junit.runners.BlockJUnit4ClassRunner;
+
 import net.sf.freecol.common.io.FreeColXMLReader;
 import net.sf.freecol.common.io.FreeColXMLWriter;
 import net.sf.freecol.common.model.Game;
@@ -24,7 +29,7 @@ import net.sf.freecol.common.model.Unit;
 import net.sf.freecol.common.model.UnitType;
 import net.sf.freecol.common.model.mission.Mission.MissionState;
 import net.sf.freecol.server.model.ServerUnit;
-import net.sf.freecol.util.test.FreeColTestCase;
+import net.sf.freecol.util.test.MockModelTestCase;
 
 
 /**
@@ -35,13 +40,14 @@ import net.sf.freecol.util.test.FreeColTestCase;
  * 23 Test Paths (1 Test Path = 1 test case), including loop back-edges not
  * enumerated by simple-path extraction.
  */
-public class CompoundMissionCfgTest extends FreeColTestCase {
+@RunWith(BlockJUnit4ClassRunner.class)
+public class CompoundMissionCfgTest extends MockModelTestCase {
 
-    private Game game;
     private Unit unit;
 
+    @Before
     @Override
-    protected void setUp() throws Exception {
+    public void setUp() throws Exception {
         super.setUp();
         // Pre-condition: standard game, explored plains map, Dutch player, one colonist on (5, 5).
         TileType plains = spec().getTileType("model.tile.plains");
@@ -102,6 +108,7 @@ public class CompoundMissionCfgTest extends FreeColTestCase {
     // ------------------------------------------------------------------
 
     // M1-TP1: ENTRY -> N0 -> EXIT
+    @Test
     public void testM1_TP1_ConstructorWithGame() {
         CompoundMission mission = new CompoundMission(game);
         assertNotNull(mission.getId());
@@ -116,6 +123,7 @@ public class CompoundMissionCfgTest extends FreeColTestCase {
     // ------------------------------------------------------------------
 
     // M2-TP1: ENTRY -> N0 -> EXIT
+    @Test
     public void testM2_TP1_ConstructorWithReader() throws Exception {
         try (FreeColXMLReader xr = new FreeColXMLReader(new StringReader("<compoundMission/>"))) {
             CompoundMission mission = new CompoundMission(game, xr);
@@ -129,6 +137,7 @@ public class CompoundMissionCfgTest extends FreeColTestCase {
     // ------------------------------------------------------------------
 
     // M3-TP1: ENTRY -> N0 -> EXIT
+    @Test
     public void testM3_TP1_ConstructorWithId() {
         CompoundMission mission = new CompoundMission(game, "compoundMission:test-1");
         assertEquals("compoundMission:test-1", mission.getId());
@@ -139,6 +148,7 @@ public class CompoundMissionCfgTest extends FreeColTestCase {
     // ------------------------------------------------------------------
 
     // M4-TP1: ENTRY -> N0 -> EXIT
+    @Test
     public void testM4_TP1_GetMissions() {
         CompoundMission mission = new CompoundMission(game);
         List<Mission> expected = new ArrayList<>();
@@ -151,6 +161,7 @@ public class CompoundMissionCfgTest extends FreeColTestCase {
     // ------------------------------------------------------------------
 
     // M5-TP1: ENTRY -> N0 -> EXIT
+    @Test
     public void testM5_TP1_SetMissions() {
         CompoundMission mission = new CompoundMission(game);
         List<Mission> children = Collections.singletonList(new StubMission(true));
@@ -163,6 +174,7 @@ public class CompoundMissionCfgTest extends FreeColTestCase {
     // ------------------------------------------------------------------
 
     // M6-TP1: ENTRY -> N0 -> EXIT
+    @Test
     public void testM6_TP1_GetIndex() {
         CompoundMission mission = new CompoundMission(game);
         assertEquals(0, mission.getIndex());
@@ -173,6 +185,7 @@ public class CompoundMissionCfgTest extends FreeColTestCase {
     // ------------------------------------------------------------------
 
     // M7-TP1: ENTRY -> N0 -> EXIT
+    @Test
     public void testM7_TP1_SetIndex() {
         CompoundMission mission = new CompoundMission(game);
         mission.setIndex(3);
@@ -184,6 +197,7 @@ public class CompoundMissionCfgTest extends FreeColTestCase {
     // ------------------------------------------------------------------
 
     // M8-TP1: ENTRY -> N0 -(B1:true)-> N3 -> N4 -> EXIT (super.isValid() == false)
+    @Test
     public void testM8_TP1_IsValidFalseWhenSuperInvalid() {
         CompoundMission mission = new CompoundMission(game); // unit is null -> super.isValid() == false
         mission.setMissions(Collections.singletonList(new StubMission(true)));
@@ -191,15 +205,28 @@ public class CompoundMissionCfgTest extends FreeColTestCase {
     }
 
     // M8-TP2: ENTRY -> N0 -(B1:false)-> N1 -(B2:true)-> N3 -> N4 -> EXIT (missions.isEmpty() == true)
+    @Test
     public void testM8_TP2_IsValidFalseWhenMissionsEmpty() {
         CompoundMission mission = newMission();
         assertFalse(mission.isValid());
     }
 
     // M8-TP3: ENTRY -> N0 -(B1:false)-> N1 -(B2:false)-> N2 -> N4 -> EXIT (all(missions, Mission::isValid))
+    @Test
     public void testM8_TP3_IsValidChecksAllChildren() {
         CompoundMission mission = newMission(new StubMission(true), new StubMission(true));
         assertTrue(mission.isValid());
+    }
+
+    @Test
+    public void testIsValidRequiresEveryChildMissionToBeValid() {
+        CompoundMission firstInvalid = newMission(
+            new StubMission(false), new StubMission(true));
+        assertFalse(firstInvalid.isValid());
+
+        CompoundMission secondInvalid = newMission(
+            new StubMission(true), new StubMission(false));
+        assertFalse(secondInvalid.isValid());
     }
 
     // ------------------------------------------------------------------
@@ -207,6 +234,7 @@ public class CompoundMissionCfgTest extends FreeColTestCase {
     // ------------------------------------------------------------------
 
     // M9-TP1: ENTRY -> N0 -(B1:true)-> N7 -> EXIT (child != COMPLETED)
+    @Test
     public void testM9_TP1_DoMissionReturnsNonCompletedState() {
         StubMission child = new StubMission(true, MissionState.BLOCKED);
         CompoundMission mission = newMission(child);
@@ -216,6 +244,7 @@ public class CompoundMissionCfgTest extends FreeColTestCase {
 
     // M9-TP2: ENTRY -> N0 -(B1:false)-> N1 -(B2:true)-> N5 -(B4:true)-> N7 -> EXIT
     // (child == COMPLETED, index < size, movesLeft <= 0)
+    @Test
     public void testM9_TP2_DoMissionAdvancesIndexAndStopsWithoutMoves() {
         unit.setMovesLeft(0);
         StubMission second = new StubMission(true, MissionState.OK);
@@ -228,6 +257,7 @@ public class CompoundMissionCfgTest extends FreeColTestCase {
 
     // M9-TP3: ENTRY -> N0 -(B1:false)-> N1 -(B2:false)-> N2 -(B3:true)-> N4 -> EXIT
     // (child == COMPLETED, index == size, repeatCount <= 0 after decrement)
+    @Test
     public void testM9_TP3_DoMissionCompletesWhenNoRepeatsLeft() {
         CompoundMission mission = newMission(new StubMission(true, MissionState.COMPLETED));
         assertEquals(MissionState.COMPLETED, mission.doMission());
@@ -236,6 +266,7 @@ public class CompoundMissionCfgTest extends FreeColTestCase {
 
     // M9-TP4: ENTRY -> N0 -(B1:false)-> N1 -(B2:false)-> N2 -(B3:false)-> N3 -> N5 -(B4:true)-> N7 -> EXIT
     // (child == COMPLETED, index == size, repeatCount > 0 after decrement, movesLeft <= 0)
+    @Test
     public void testM9_TP4_DoMissionResetsIndexOnRepeatWithoutMoves() {
         unit.setMovesLeft(0);
         CompoundMission mission = newMission(new StubMission(true, MissionState.COMPLETED));
@@ -247,6 +278,7 @@ public class CompoundMissionCfgTest extends FreeColTestCase {
 
     // M9-TP5: ENTRY -> N0 -(B1:false)-> N1 -(B2:true)-> N5 -(B4:false)-> N6 -> N0 -(B1:true)-> N7 -> EXIT
     // (loop path covering N5->N6 and N6->N0 when movesLeft > 0)
+    @Test
     public void testM9_TP5_DoMissionLoopsToNextChildWhenMovesLeft() {
         unit.setMovesLeft(3);
         StubMission second = new StubMission(true, MissionState.OK);
@@ -262,6 +294,7 @@ public class CompoundMissionCfgTest extends FreeColTestCase {
     // ------------------------------------------------------------------
 
     // M10-TP1: ENTRY -> N0 -> EXIT
+    @Test
     public void testM10_TP1_WriteAttributes() throws Exception {
         CompoundMission mission = newMission();
         mission.setIndex(2);
@@ -281,6 +314,7 @@ public class CompoundMissionCfgTest extends FreeColTestCase {
     // ------------------------------------------------------------------
 
     // M11-TP1: ENTRY -> N0 -> N1 -(B1:true)-> N3 -> EXIT (empty missions)
+    @Test
     public void testM11_TP1_WriteChildrenEmpty() throws Exception {
         CompoundMission mission = newMission();
         ByteArrayOutputStream out = new ByteArrayOutputStream();
@@ -290,6 +324,7 @@ public class CompoundMissionCfgTest extends FreeColTestCase {
     }
 
     // M11-TP2: ENTRY -> N0 -> N1 -(B1:false)-> N2 -> N1 -(B1:true)-> N3 -> EXIT (non-empty missions)
+    @Test
     public void testM11_TP2_WriteChildrenNonEmpty() throws Exception {
         CompoundMission mission = newMission(new StubMission(true));
         ByteArrayOutputStream out = new ByteArrayOutputStream();
@@ -303,6 +338,7 @@ public class CompoundMissionCfgTest extends FreeColTestCase {
     // ------------------------------------------------------------------
 
     // M12-TP1: ENTRY -> N0 -> EXIT
+    @Test
     public void testM12_TP1_ReadAttributes() throws Exception {
         String xml = "<compoundMission id=\"compoundMission:attr-1\" unit=\"" + unit.getId()
                 + "\" index=\"4\" repeatCount=\"2\" turnCount=\"5\"/>";
@@ -322,6 +358,7 @@ public class CompoundMissionCfgTest extends FreeColTestCase {
     // ------------------------------------------------------------------
 
     // M13-TP1: ENTRY -> N0 -> N1 -(B1:true)-> N5 -> EXIT (no child tags)
+    @Test
     public void testM13_TP1_ReadChildrenEmpty() throws Exception {
         String xml = "<compoundMission/>";
         CompoundMission mission = new CompoundMission(game, "compoundMission:rc-1");
@@ -335,6 +372,7 @@ public class CompoundMissionCfgTest extends FreeColTestCase {
 
     // M13-TP2: ENTRY -> N0 -> N1 -(B1:false)-> N2 -(B2:true)-> N4 -> N1 -(B1:true)-> N5 -> EXIT
     // (unknown child tag -> MissionManager.getMission returns null)
+    @Test
     public void testM13_TP2_ReadChildrenSkipsUnknownTag() throws Exception {
         String xml = "<compoundMission><unknownMission/></compoundMission>";
         CompoundMission mission = new CompoundMission(game, "compoundMission:rc-2");
@@ -348,6 +386,7 @@ public class CompoundMissionCfgTest extends FreeColTestCase {
 
     // M13-TP3: ENTRY -> N0 -> N1 -(B1:false)-> N2 -(B2:false)-> N3 -> N4 -> N1 -(B1:true)-> N5 -> EXIT
     // (known child tag <goToMission/> -> MissionManager.getMission returns GoToMission)
+    @Test
     public void testM13_TP3_ReadChildrenAddsValidMission() throws Exception {
         String xml = "<compoundMission><goToMission/></compoundMission>";
         CompoundMission mission = new CompoundMission(game, "compoundMission:rc-3");
@@ -365,6 +404,7 @@ public class CompoundMissionCfgTest extends FreeColTestCase {
     // ------------------------------------------------------------------
 
     // M14-TP1: ENTRY -> N0 -> EXIT
+    @Test
     public void testM14_TP1_GetXMLTagName() {
         assertEquals("compoundMission", new CompoundMission(game).getXMLTagName());
     }
