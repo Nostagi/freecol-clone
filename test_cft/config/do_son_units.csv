@@ -1,0 +1,17 @@
+package,file,class_name,public_methods,loc
+common/model/pathfinding,net/sf/freecol/common/model/pathfinding/GoalDeciders.java,GoalDeciders,50,488
+common/model/pathfinding,net/sf/freecol/common/model/pathfinding/CostDeciders.java,CostDeciders,24,393
+common/model/pathfinding,net/sf/freecol/common/model/pathfinding/BaseCostDecider.java,BaseCostDecider,3,169
+common/model/pathfinding,net/sf/freecol/common/model/pathfinding/GoalDecider.java,GoalDecider,3,78
+common/model/pathfinding,net/sf/freecol/common/model/pathfinding/CostDecider.java,CostDecider,3,66
+common/model,net/sf/freecol/common/model/Player.java,Player,250,4574
+common/model,net/sf/freecol/common/model/UnitLocation.java,UnitLocation,33,631
+common/model,net/sf/freecol/common/model/DiplomaticTrade.java,DiplomaticTrade,32,563
+common/model,net/sf/freecol/common/model/BuildingType.java,BuildingType,30,721
+common/model,net/sf/freecol/common/model/ColonyTile.java,ColonyTile,30,559
+common/model,net/sf/freecol/common/model/Monarch.java,Monarch,29,949
+common/model,net/sf/freecol/common/model/StringTemplate.java,StringTemplate,29,687
+common/model,net/sf/freecol/common/model/Role.java,Role,28,566
+common/model,net/sf/freecol/common/model/GoodsContainer.java,GoodsContainer,27,712
+common/model,net/sf/freecol/common/model/TileItemContainer.java,TileItemContainer,27,695
+common/model,net/sf/freecol/common/model/MarketData.java,MarketData,26,514

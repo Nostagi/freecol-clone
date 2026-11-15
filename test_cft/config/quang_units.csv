@@ -1,0 +1,16 @@
+package,file,class_name,public_methods,loc
+common/model/mission,net/sf/freecol/common/model/mission/AbstractMission.java,AbstractMission,8,202
+common/model/mission,net/sf/freecol/common/model/mission/GoToMission.java,GoToMission,8,186
+common/model/mission,net/sf/freecol/common/model/mission/CompoundMission.java,CompoundMission,7,212
+common/model/mission,net/sf/freecol/common/model/mission/ImprovementMission.java,ImprovementMission,6,170
+common/model/mission,net/sf/freecol/common/model/mission/Mission.java,Mission,4,94
+common/model/mission,net/sf/freecol/common/model/mission/MissionManager.java,MissionManager,2,98
+common/model,net/sf/freecol/common/model/Unit.java,Unit,254,4983
+common/model,net/sf/freecol/common/model/Settlement.java,Settlement,51,928
+common/model,net/sf/freecol/common/model/Europe.java,Europe,41,784
+common/model,net/sf/freecol/common/model/Region.java,Region,37,688
+common/model,net/sf/freecol/common/model/Building.java,Building,37,584
+common/model,net/sf/freecol/common/model/TileImprovement.java,TileImprovement,36,802
+common/model,net/sf/freecol/common/model/NativeTrade.java,NativeTrade,36,670
+common/model,net/sf/freecol/common/model/GoodsType.java,GoodsType,35,744
+common/model,net/sf/freecol/common/model/Market.java,Market,34,625

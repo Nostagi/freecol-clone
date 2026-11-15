@@ -47,14 +47,14 @@ freecol-master/
    │   ├─ test/resources/
    │   └─ tools/java/                    # CFG extractor sources (package e.g. cft.tool)
    ├─ graph/                             # Stage A output: <package>/<Class>.json (+ .dot)
-   ├─ scripts/  compile.cmd  run.cmd     # thin wrappers around mvn
-   ├─ reports/                           # (generated) surefire/ and jacoco/ (html, jacoco.xml, jacoco.csv)
+   ├─ scripts/  compile.cmd  run.cmd  jacoco.cmd  resolve_subset_tests.ps1
+   ├─ reports/                           # (generated) surefire/, jacoco/, and subsets/<csv_name>/
    └─ target/                            # (generated) Maven output
 ```
 
 **Conventions**
 1. **Same package as the class under test** (`net.sf.freecol.common.model.ColonyCfgTest` tests `...common.model.Colony`) so package-private members are reachable.
-2. File name must end in **`CfgTest.java`** — surefire only runs `**/*CfgTest.java` (the copied fixtures are therefore not executed).
+2. File name must end in **`CfgTest.java`** or **`CFTTest.java`** — surefire runs `**/*CfgTest.java` and `**/*CFTTest.java` (the copied fixtures are therefore not executed).
 3. Tests extend `FreeColTestCase` when a game/spec is needed; legacy `*Test` cases are never used.
 4. Do not put sources under `graph/`, `reports/` or `config/`.
 
@@ -81,11 +81,27 @@ Ant is **not** needed. FreeCol's runtime jars come from `../jars/` (declared in 
 | Goal | Command |
 |---|---|
 | Check the setup (compile main + tests, no run) | `test_cft\scripts\compile.cmd` |
-| Run all `*CfgTest` + JaCoCo report | `test_cft\scripts\run.cmd` |
-| Run one test class | `test_cft\scripts\run.cmd -Dtest=ColonyCfgTest` |
+| Run all `*CfgTest` & `*CFTTest` + JaCoCo report (`common` only) | `test_cft\scripts\jacoco.cmd` |
+| Measure coverage for a CSV subset (explicit flag + Maven opts) | `test_cft\scripts\jacoco.cmd -csv config\suong_high_priority_files.csv -o` |
+| Run one or more specific test classes + JaCoCo report | `test_cft\scripts\jacoco.cmd -Dtest=CompoundMissionCfgTest` |
+| Run all tests via `run.cmd` | `test_cft\scripts\run.cmd` |
 | Raw Maven equivalent | `mvn -f test_cft/pom.xml clean verify` |
 
-Outputs: `test_cft/reports/surefire/` (test results), `test_cft/reports/jacoco/index.html`, `jacoco.xml`, `jacoco.csv` — **only High-priority classes** are reported (`<includes>` in `pom.xml`; root package contributes only `FreeCol*`).
+### JaCoCo Coverage Measurement (`scripts\jacoco.cmd`)
+
+- **Report scope (`net.sf.freecol.common.**` only):** `pom.xml` restricts both the JaCoCo agent and `jacoco:report` to `net/sf/freecol/common/**`. Packages outside `common` (`client`, `server`, `metaserver`, `tools`, and root `net.sf.freecol`) are excluded from the statistics table.
+- **Subset measurement by CSV (measuring individual contributions):**
+  1. Create a CSV listing the units assigned to a member (e.g. [`config/suong_high_priority_files.csv`](config/suong_high_priority_files.csv)). Supported formats:
+     - Standard config CSV with `package,file,class_name,...` header (like `high_priority_files.csv` / `suong_high_priority_files.csv`; leading blank lines and `#` comments are ignored).
+     - Simple headerless list with one class name, `.java` path, or test class name per line.
+  2. Run `test_cft\scripts\jacoco.cmd <path-to-csv>` (accepts an absolute path, repo-relative path, `test_cft`-relative path, or a filename inside `test_cft\config\`).
+  3. `scripts\resolve_subset_tests.ps1` matches each unit `<ClassName>` to its existing test files (`<ClassName>CfgTest.java`, `<ClassName>CFTTest.java`, or `<ClassName>Test.java` under `test_cft\src\test\java`) while preventing cross-package collisions (e.g. `client` vs `server`), prints matched/missing units, and passes `-Dtest=...` to Surefire.
+  4. JaCoCo runs **only those subset tests** and reports coverage measured across **all of `net.sf.freecol.common`**. Failed tests do not abort report generation (`-Dmaven.test.failure.ignore=true`).
+- **Outputs:**
+  - `test_cft/reports/surefire/` — JUnit test results.
+  - `test_cft/reports/jacoco/index.html`, `jacoco.xml`, `jacoco.csv` — latest JaCoCo report (restricted to `net.sf.freecol.common.**`).
+  - `test_cft/reports/jacoco/common_summary.csv` — per-subpackage and total `common` coverage summary (also printed to the console).
+  - `test_cft/reports/subsets/<csv_name>/` — preserved copy of the full JaCoCo report + `common_summary.csv` for each CSV subset run, so team members' results are not overwritten.
 
 ## 6. Pipeline guide
 

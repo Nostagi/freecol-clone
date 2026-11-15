@@ -1,4 +1,3 @@
-
 package,file,class_name,public_methods,loc
 common/util,net/sf/freecol/common/util/Utils.java,Utils,20,421
 common/util,net/sf/freecol/common/util/ImageUtils.java,ImageUtils,14,351

@@ -1,0 +1,13 @@
+package,file,class_name,public_methods,loc
+common/util,net/sf/freecol/common/util/CollectionUtils.java,CollectionUtils,155,2608
+common/model/production,net/sf/freecol/common/model/production/TileProductionCalculator.java,TileProductionCalculator,9,328
+common/model/production,net/sf/freecol/common/model/production/BuildingProductionCalculator.java,BuildingProductionCalculator,2,377
+common/model/production,net/sf/freecol/common/model/production/ProductionUtils.java,ProductionUtils,2,85
+common/model/production,net/sf/freecol/common/model/production/WorkerAssignment.java,WorkerAssignment,2,43
+common/model,net/sf/freecol/common/model/Colony.java,Colony,158,3315
+common/model,net/sf/freecol/common/model/Map.java,Map,107,2870
+common/model,net/sf/freecol/common/model/Game.java,Game,92,1874
+common/model,net/sf/freecol/common/model/FreeColObject.java,FreeColObject,91,1431
+common/model,net/sf/freecol/common/model/IndianSettlement.java,IndianSettlement,77,1806
+common/model,net/sf/freecol/common/model/WorkLocation.java,WorkLocation,59,1028
+common/model,net/sf/freecol/common/model/UnitType.java,UnitType,56,1058

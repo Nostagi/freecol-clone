@@ -31,6 +31,7 @@
     <argLine></argLine>
     <!-- Default JVM for surefire; scripts/*.cmd may override -Dsurefire.jvm=... when JAVA_HOME contains parentheses -->
     <surefire.jvm>${java.home}/bin/java</surefire.jvm>
+    <jacoco.reportDir>${project.basedir}/reports/jacoco</jacoco.reportDir>
   </properties>
 
   <dependencies>
@@ -93,7 +94,7 @@
         <artifactId>jacoco-maven-plugin</artifactId>
         <version>${jacoco.version}</version>
         <configuration>
-          <includes><include>net/sf/freecol/**</include></includes>
+          <includes><include>net/sf/freecol/common/**</include></includes>
         </configuration>
         <executions>
           <execution><id>agent</id><goals><goal>prepare-agent</goal></goals></execution>
@@ -102,10 +103,10 @@
             <phase>verify</phase>
             <goals><goal>report</goal></goals>
             <configuration>
-              <outputDirectory>${project.basedir}/reports/jacoco</outputDirectory>
-              <!-- Report all classes matching the source tree in ../src (no high-priority module filtering) -->
+              <outputDirectory>${jacoco.reportDir}</outputDirectory>
+              <!-- Report ONLY classes under net/sf/freecol/common/** (exclude client, server, metaserver, tools, root) -->
               <includes>
-                <include>net/sf/freecol/**</include>
+                <include>net/sf/freecol/common/**</include>
               </includes>
             </configuration>
           </execution>
@@ -121,7 +122,10 @@
           <!-- FreeCol resolves "data/..." and "test/data/..." relative to the repository root -->
           <workingDirectory>${repo.root}</workingDirectory>
           <argLine>@{argLine} -Djava.awt.headless=false</argLine>
-          <includes><include>**/*CfgTest.java</include></includes>
+          <includes>
+            <include>**/*CfgTest.java</include>
+            <include>**/*CFTTest.java</include>
+          </includes>
           <reportsDirectory>${project.basedir}/reports/surefire</reportsDirectory>
         </configuration>
       </plugin>
