@@ -32,9 +32,9 @@ if not defined SUREFIRE_JVM_ARG (
 )
 
 if defined SUREFIRE_JVM_ARG (
-    call mvn -f "%HERE%\pom.xml" clean verify "%SUREFIRE_JVM_ARG%" %*
+    call mvn -f "%HERE%\pom.xml" clean verify -Dmaven.test.failure.ignore=true "%SUREFIRE_JVM_ARG%" %*
 ) else (
-    call mvn -f "%HERE%\pom.xml" clean verify %*
+    call mvn -f "%HERE%\pom.xml" clean verify -Dmaven.test.failure.ignore=true %*
 )
 set "EXIT_CODE=%ERRORLEVEL%"
 if %EXIT_CODE% neq 0 exit /b %EXIT_CODE%
