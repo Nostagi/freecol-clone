@@ -1,0 +1,482 @@
+[INFO] Scanning for projects...
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for freecol.testcft:freecol-cft:jar:1.0
+[WARNING] 'dependencies.dependency.scope' for local:commons-cli:jar declares usage of deprecated 'system' scope  @ line 36, column 106
+[WARNING] 'dependencies.dependency.scope' for local:cortado:jar declares usage of deprecated 'system' scope  @ line 37, column 104
+[WARNING] 'dependencies.dependency.scope' for local:findbugs-annotations:jar declares usage of deprecated 'system' scope  @ line 38, column 113
+[WARNING] 'dependencies.dependency.scope' for local:jogg:jar declares usage of deprecated 'system' scope  @ line 39, column 102
+[WARNING] 'dependencies.dependency.scope' for local:jorbis:jar declares usage of deprecated 'system' scope  @ line 40, column 104
+[WARNING] 'dependencies.dependency.scope' for local:miglayout-core:jar declares usage of deprecated 'system' scope  @ line 41, column 109
+[WARNING] 'dependencies.dependency.scope' for local:miglayout-swing:jar declares usage of deprecated 'system' scope  @ line 42, column 110
+[WARNING] 
+[WARNING] It is highly recommended to fix these problems because they threaten the stability of your build.
+[WARNING] 
+[WARNING] For this reason, future Maven versions might no longer support building such malformed projects.
+[WARNING] 
+[INFO] Loaded 24474 auto-discovered prefixes for remote repository central (prefixes-central.txt)
+[INFO] Loaded 64 auto-discovered prefixes for remote repository apache.snapshots (prefixes-apache.snapshots.txt)
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-help-plugin/maven-metadata.xml
+Progress (1): 838 B                   Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-help-plugin/maven-metadata.xml (838 B at 4.8 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-help-plugin/3.5.2/maven-help-plugin-3.5.2.pom
+Progress (1): 802 BProgress (1): 869 BProgress (1): 2.2 kBProgress (1): 4.9 kBProgress (1): 8.2 kBProgress (1): 10 kB                    Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-help-plugin/3.5.2/maven-help-plugin-3.5.2.pom (10 kB at 144 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-help-plugin/3.5.2/maven-help-plugin-3.5.2.jar
+Progress (1): 0.5/72 kBProgress (1): 1.9/72 kBProgress (1): 3.3/72 kBProgress (1): 4.7/72 kBProgress (1): 6.0/72 kBProgress (1): 7.3/72 kBProgress (1): 8.6/72 kBProgress (1): 10.0/72 kBProgress (1): 11/72 kB  Progress (1): 13/72 kBProgress (1): 14/72 kBProgress (1): 15/72 kBProgress (1): 17/72 kBProgress (1): 18/72 kBProgress (1): 20/72 kBProgress (1): 21/72 kBProgress (1): 22/72 kBProgress (1): 24/72 kBProgress (1): 25/72 kBProgress (1): 26/72 kBProgress (1): 28/72 kBProgress (1): 29/72 kBProgress (1): 31/72 kBProgress (1): 32/72 kBProgress (1): 33/72 kBProgress (1): 35/72 kBProgress (1): 36/72 kBProgress (1): 37/72 kBProgress (1): 39/72 kBProgress (1): 40/72 kBProgress (1): 41/72 kBProgress (1): 43/72 kBProgress (1): 44/72 kBProgress (1): 46/72 kBProgress (1): 47/72 kBProgress (1): 51/72 kBProgress (1): 55/72 kBProgress (1): 60/72 kBProgress (1): 64/72 kBProgress (1): 68/72 kBProgress (1): 72/72 kBProgress (1): 72 kB                      Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-help-plugin/3.5.2/maven-help-plugin-3.5.2.jar (72 kB at 893 kB/s)
+[INFO] 
+[INFO] --------------------< freecol.testcft:freecol-cft >---------------------
+[INFO] Building freecol-cft 1.0
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- help:3.5.2:effective-pom (default-cli) @ freecol-cft ---
+Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-interactivity-api/1.5.1/plexus-interactivity-api-1.5.1.pom
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugin-tools/maven-plugin-tools-generators/3.15.2/maven-plugin-tools-generators-3.15.2.pom
+Downloading from central: https://repo.maven.apache.org/maven2/org/jdom/jdom2/2.0.6.1/jdom2-2.0.6.1.pom
+Progress (1): 1.6 kBProgress (1): 1.7 kB                    Downloading from central: https://repo.maven.apache.org/maven2/com/thoughtworks/xstream/xstream/1.4.21/xstream-1.4.21.pom
+Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-interactivity-api/1.5.1/plexus-interactivity-api-1.5.1.pom (1.7 kB at 24 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-interactivity/1.5.1/plexus-interactivity-1.5.1.pom
+Progress (1): 842 BProgress (1): 910 BProgress (1): 3.6 kBProgress (1): 3.8 kBProgress (2): 3.8 kB | 947 BProgress (2): 3.8 kB | 4.0 kBProgress (2): 3.8 kB | 7.1 kBProgress (2): 3.8 kB | 9.9 kBProgress (2): 3.8 kB | 14 kB Progress (2): 3.8 kB | 21 kBProgress (2): 3.8 kB | 24 kBProgress (2): 3.8 kB | 24 kB                            Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugin-tools/maven-plugin-tools-generators/3.15.2/maven-plugin-tools-generators-3.15.2.pom (3.8 kB at 32 kB/s)
+Downloaded from central: https://repo.maven.apache.org/maven2/com/thoughtworks/xstream/xstream/1.4.21/xstream-1.4.21.pom (24 kB at 430 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugin-tools/maven-plugin-tools/3.15.2/maven-plugin-tools-3.15.2.pom
+Downloading from central: https://repo.maven.apache.org/maven2/com/thoughtworks/xstream/xstream-parent/1.4.21/xstream-parent-1.4.21.pom
+Progress (1): 956 BProgress (1): 986 BProgress (1): 2.3 kBProgress (1): 3.2 kBProgress (1): 4.4 kBProgress (1): 4.6 kB                    Downloaded from central: https://repo.maven.apache.org/maven2/org/jdom/jdom2/2.0.6.1/jdom2-2.0.6.1.pom (4.6 kB at 42 kB/s)
+Progress (1): 799 BProgress (1): 866 BProgress (1): 3.5 kBProgress (1): 6.1 kBProgress (1): 9.3 kBProgress (1): 12 kB Progress (1): 18 kBProgress (1): 21 kBProgress (1): 26 kBProgress (1): 31 kBProgress (1): 34 kBProgress (1): 39 kBProgress (1): 41 kBProgress (1): 43 kBProgress (1): 44 kBProgress (2): 44 kB | 1.3 kBProgress (2): 44 kB | 1.3 kBProgress (2): 44 kB | 1.7 kB                            Downloaded from central: https://repo.maven.apache.org/maven2/com/thoughtworks/xstream/xstream-parent/1.4.21/xstream-parent-1.4.21.pom (44 kB at 757 kB/s)
+Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-interactivity/1.5.1/plexus-interactivity-1.5.1.pom (1.7 kB at 14 kB/s)
+Progress (1): 792 BProgress (1): 2.3 kBProgress (1): 4.0 kBProgress (1): 9.0 kBProgress (1): 13 kB Progress (1): 16 kBProgress (1): 18 kB                   Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugin-tools/maven-plugin-tools/3.15.2/maven-plugin-tools-3.15.2.pom (18 kB at 239 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/junit/junit-bom/5.14.0/junit-bom-5.14.0.pom
+Progress (1): 908 BProgress (1): 4.1 kBProgress (1): 5.7 kB                    Downloaded from central: https://repo.maven.apache.org/maven2/org/junit/junit-bom/5.14.0/junit-bom-5.14.0.pom (5.7 kB at 103 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/io/github/x-stream/mxparser/1.2.2/mxparser-1.2.2.pom
+Downloading from central: https://repo.maven.apache.org/maven2/org/jsoup/jsoup/1.19.1/jsoup-1.19.1.pom
+Progress (1): 775 BProgress (1): 2.3 kBProgress (1): 4.4 kBProgress (1): 7.5 kBProgress (1): 11 kB Progress (1): 12 kBProgress (1): 14 kBProgress (1): 18 kBProgress (1): 21 kBProgress (2): 21 kB | 817 BProgress (2): 21 kB | 858 BProgress (2): 21 kB | 2.9 kBProgress (2): 21 kB | 6.4 kBProgress (2): 21 kB | 9.0 kBProgress (2): 21 kB | 14 kB Progress (2): 21 kB | 18 kBProgress (2): 21 kB | 21 kBProgress (2): 21 kB | 24 kB                           Downloaded from central: https://repo.maven.apache.org/maven2/org/jsoup/jsoup/1.19.1/jsoup-1.19.1.pom (21 kB at 348 kB/s)
+Downloaded from central: https://repo.maven.apache.org/maven2/io/github/x-stream/mxparser/1.2.2/mxparser-1.2.2.pom (24 kB at 367 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/xmlpull/xmlpull/1.1.3.1/xmlpull-1.1.3.1.pom
+Progress (1): 386 B                   Downloaded from central: https://repo.maven.apache.org/maven2/xmlpull/xmlpull/1.1.3.1/xmlpull-1.1.3.1.pom (386 B at 7.0 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugin-tools/maven-plugin-tools-generators/3.15.2/maven-plugin-tools-generators-3.15.2.jar
+Progress (1): 0.5/42 kBProgress (1): 1.9/42 kBProgress (1): 3.3/42 kBProgress (1): 4.7/42 kBProgress (1): 6.0/42 kBProgress (1): 7.4/42 kBProgress (1): 8.2/42 kBProgress (1): 9.6/42 kBProgress (1): 11/42 kB Progress (1): 12/42 kBProgress (1): 14/42 kBProgress (1): 15/42 kBProgress (1): 16/42 kBProgress (1): 18/42 kBProgress (1): 19/42 kBProgress (1): 21/42 kBProgress (1): 22/42 kBProgress (1): 23/42 kBProgress (1): 25/42 kBProgress (1): 26/42 kBProgress (1): 27/42 kBProgress (1): 29/42 kBProgress (1): 30/42 kBProgress (1): 31/42 kBProgress (1): 33/42 kBProgress (1): 34/42 kBProgress (1): 36/42 kBProgress (1): 37/42 kBProgress (1): 38/42 kBProgress (1): 40/42 kBProgress (1): 41/42 kBProgress (1): 42 kB                      Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugin-tools/maven-plugin-tools-generators/3.15.2/maven-plugin-tools-generators-3.15.2.jar (42 kB at 474 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-interactivity-api/1.5.1/plexus-interactivity-api-1.5.1.jar
+Downloading from central: https://repo.maven.apache.org/maven2/org/jdom/jdom2/2.0.6.1/jdom2-2.0.6.1.jar
+Downloading from central: https://repo.maven.apache.org/maven2/com/thoughtworks/xstream/xstream/1.4.21/xstream-1.4.21.jar
+Downloading from central: https://repo.maven.apache.org/maven2/org/jsoup/jsoup/1.19.1/jsoup-1.19.1.jar
+Downloading from central: https://repo.maven.apache.org/maven2/io/github/x-stream/mxparser/1.2.2/mxparser-1.2.2.jar
+Progress (1): 0.9/473 kBProgress (1): 2.3/473 kBProgress (2): 2.3/473 kB | 0.9/328 kBProgress (3): 2.3/473 kB | 0.9/328 kB | 3.8/647 kBProgress (3): 2.3/473 kB | 2.3/328 kB | 3.8/647 kBProgress (3): 3.6/473 kB | 2.3/328 kB | 3.8/647 kBProgress (3): 3.6/473 kB | 3.2/328 kB | 3.8/647 kBProgress (3): 3.6/473 kB | 3.2/328 kB | 7.3/647 kBProgress (3): 5.0/473 kB | 3.2/328 kB | 7.3/647 kBProgress (3): 6.4/473 kB | 3.2/328 kB | 7.3/647 kBProgress (3): 6.4/473 kB | 4.5/328 kB | 7.3/647 kBProgress (3): 6.4/473 kB | 4.5/328 kB | 12/647 kB Progress (3): 7.7/473 kB | 4.5/328 kB | 12/647 kBProgress (3): 7.7/473 kB | 5.9/328 kB | 12/647 kBProgress (3): 7.7/473 kB | 5.9/328 kB | 15/647 kBProgress (3): 9.1/473 kB | 5.9/328 kB | 15/647 kBProgress (3): 9.1/473 kB | 7.3/328 kB | 15/647 kBProgress (3): 10/473 kB | 7.3/328 kB | 15/647 kB Progress (3): 10/473 kB | 8.7/328 kB | 15/647 kBProgress (3): 10/473 kB | 8.7/328 kB | 20/647 kBProgress (3): 12/473 kB | 8.7/328 kB | 20/647 kBProgress (4): 12/473 kB | 8.7/328 kB | 20/647 kB | 3.8/10 kBProgress (4): 13/473 kB | 8.7/328 kB | 20/647 kB | 3.8/10 kBProgress (4): 13/473 kB | 10/328 kB | 20/647 kB | 3.8/10 kB Progress (4): 15/473 kB | 10/328 kB | 20/647 kB | 3.8/10 kBProgress (4): 15/473 kB | 11/328 kB | 20/647 kB | 3.8/10 kBProgress (4): 16/473 kB | 11/328 kB | 20/647 kB | 3.8/10 kBProgress (4): 16/473 kB | 11/328 kB | 20/647 kB | 8.0/10 kBProgress (4): 16/473 kB | 13/328 kB | 20/647 kB | 8.0/10 kBProgress (4): 17/473 kB | 13/328 kB | 20/647 kB | 8.0/10 kBProgress (4): 17/473 kB | 13/328 kB | 20/647 kB | 10 kB    Progress (4): 17/473 kB | 14/328 kB | 20/647 kB | 10 kBProgress (4): 19/473 kB | 14/328 kB | 20/647 kB | 10 kBProgress (4): 20/473 kB | 14/328 kB | 20/647 kB | 10 kBProgress (4): 20/473 kB | 15/328 kB | 20/647 kB | 10 kBProgress (4): 21/473 kB | 15/328 kB | 20/647 kB | 10 kBProgress (4): 21/473 kB | 17/328 kB | 20/647 kB | 10 kBProgress (4): 23/473 kB | 17/328 kB | 20/647 kB | 10 kBProgress (4): 24/473 kB | 17/328 kB | 20/647 kB | 10 kBProgress (4): 24/473 kB | 18/328 kB | 20/647 kB | 10 kBProgress (4): 26/473 kB | 18/328 kB | 20/647 kB | 10 kBProgress (4): 26/473 kB | 20/328 kB | 20/647 kB | 10 kBProgress (4): 27/473 kB | 20/328 kB | 20/647 kB | 10 kBProgress (4): 27/473 kB | 21/328 kB | 20/647 kB | 10 kBProgress (4): 28/473 kB | 21/328 kB | 20/647 kB | 10 kBProgress (4): 28/473 kB | 22/328 kB | 20/647 kB | 10 kBProgress (4): 28/473 kB | 24/328 kB | 20/647 kB | 10 kBProgress (4): 30/473 kB | 24/328 kB | 20/647 kB | 10 kBProgress (4): 31/473 kB | 24/328 kB | 20/647 kB | 10 kBProgress (4): 31/473 kB | 25/328 kB | 20/647 kB | 10 kBProgress (4): 32/473 kB | 25/328 kB | 20/647 kB | 10 kBProgress (4): 34/473 kB | 25/328 kB | 20/647 kB | 10 kBProgress (4): 35/473 kB | 25/328 kB | 20/647 kB | 10 kBProgress (4): 36/473 kB | 25/328 kB | 20/647 kB | 10 kBProgress (4): 38/473 kB | 25/328 kB | 20/647 kB | 10 kB                                                       Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-interactivity-api/1.5.1/plexus-interactivity-api-1.5.1.jar (10 kB at 93 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/xmlpull/xmlpull/1.1.3.1/xmlpull-1.1.3.1.jar
+Progress (3): 38/473 kB | 26/328 kB | 20/647 kBProgress (3): 38/473 kB | 28/328 kB | 20/647 kBProgress (3): 38/473 kB | 29/328 kB | 20/647 kBProgress (3): 38/473 kB | 30/328 kB | 20/647 kBProgress (3): 38/473 kB | 32/328 kB | 20/647 kBProgress (3): 38/473 kB | 33/328 kB | 20/647 kBProgress (3): 38/473 kB | 33/328 kB | 24/647 kBProgress (3): 38/473 kB | 33/328 kB | 28/647 kBProgress (3): 38/473 kB | 33/328 kB | 32/647 kBProgress (3): 39/473 kB | 33/328 kB | 32/647 kBProgress (3): 41/473 kB | 33/328 kB | 32/647 kBProgress (3): 41/473 kB | 35/328 kB | 32/647 kBProgress (3): 42/473 kB | 35/328 kB | 32/647 kBProgress (3): 43/473 kB | 35/328 kB | 32/647 kBProgress (3): 45/473 kB | 35/328 kB | 32/647 kBProgress (3): 45/473 kB | 36/328 kB | 32/647 kBProgress (3): 46/473 kB | 36/328 kB | 32/647 kBProgress (3): 47/473 kB | 36/328 kB | 32/647 kBProgress (3): 49/473 kB | 36/328 kB | 32/647 kBProgress (3): 50/473 kB | 36/328 kB | 32/647 kBProgress (3): 50/473 kB | 37/328 kB | 32/647 kBProgress (3): 54/473 kB | 37/328 kB | 32/647 kBProgress (3): 57/473 kB | 37/328 kB | 32/647 kBProgress (3): 57/473 kB | 39/328 kB | 32/647 kBProgress (3): 61/473 kB | 39/328 kB | 32/647 kBProgress (3): 65/473 kB | 39/328 kB | 32/647 kBProgress (3): 70/473 kB | 39/328 kB | 32/647 kBProgress (3): 74/473 kB | 39/328 kB | 32/647 kBProgress (3): 78/473 kB | 39/328 kB | 32/647 kBProgress (3): 82/473 kB | 39/328 kB | 32/647 kBProgress (3): 86/473 kB | 39/328 kB | 32/647 kBProgress (3): 86/473 kB | 40/328 kB | 32/647 kBProgress (3): 91/473 kB | 40/328 kB | 32/647 kBProgress (3): 91/473 kB | 40/328 kB | 36/647 kBProgress (3): 91/473 kB | 41/328 kB | 36/647 kBProgress (3): 95/473 kB | 41/328 kB | 36/647 kBProgress (3): 95/473 kB | 46/328 kB | 36/647 kBProgress (3): 99/473 kB | 46/328 kB | 36/647 kBProgress (3): 99/473 kB | 50/328 kB | 36/647 kBProgress (3): 99/473 kB | 50/328 kB | 40/647 kBProgress (3): 99/473 kB | 54/328 kB | 40/647 kBProgress (3): 99/473 kB | 58/328 kB | 40/647 kBProgress (3): 99/473 kB | 63/328 kB | 40/647 kBProgress (3): 99/473 kB | 67/328 kB | 40/647 kBProgress (3): 99/473 kB | 71/328 kB | 40/647 kBProgress (3): 99/473 kB | 75/328 kB | 40/647 kBProgress (3): 99/473 kB | 80/328 kB | 40/647 kBProgress (3): 99/473 kB | 84/328 kB | 40/647 kBProgress (3): 99/473 kB | 88/328 kB | 40/647 kBProgress (3): 99/473 kB | 88/328 kB | 45/647 kBProgress (3): 99/473 kB | 88/328 kB | 49/647 kBProgress (3): 99/473 kB | 92/328 kB | 49/647 kBProgress (3): 99/473 kB | 93/328 kB | 49/647 kBProgress (3): 99/473 kB | 93/328 kB | 53/647 kBProgress (3): 99/473 kB | 98/328 kB | 53/647 kBProgress (3): 99/473 kB | 98/328 kB | 57/647 kBProgress (3): 99/473 kB | 98/328 kB | 61/647 kBProgress (3): 99/473 kB | 98/328 kB | 65/647 kBProgress (3): 99/473 kB | 98/328 kB | 69/647 kBProgress (3): 99/473 kB | 98/328 kB | 73/647 kBProgress (3): 99/473 kB | 98/328 kB | 77/647 kBProgress (3): 99/473 kB | 98/328 kB | 82/647 kBProgress (3): 99/473 kB | 98/328 kB | 86/647 kBProgress (3): 99/473 kB | 98/328 kB | 90/647 kBProgress (4): 99/473 kB | 98/328 kB | 90/647 kB | 3.8/7.2 kBProgress (5): 99/473 kB | 98/328 kB | 90/647 kB | 3.8/7.2 kB | 0.9/30 kBProgress (5): 99/473 kB | 98/328 kB | 90/647 kB | 3.8/7.2 kB | 2.3/30 kBProgress (5): 99/473 kB | 98/328 kB | 90/647 kB | 7.2 kB | 2.3/30 kB    Progress (5): 99/473 kB | 98/328 kB | 90/647 kB | 7.2 kB | 3.1/30 kBProgress (5): 103/473 kB | 98/328 kB | 90/647 kB | 7.2 kB | 3.1/30 kBProgress (5): 103/473 kB | 98/328 kB | 90/647 kB | 7.2 kB | 4.5/30 kBProgress (5): 103/473 kB | 98/328 kB | 90/647 kB | 7.2 kB | 5.9/30 kBProgress (5): 103/473 kB | 98/328 kB | 90/647 kB | 7.2 kB | 7.3/30 kBProgress (5): 103/473 kB | 98/328 kB | 90/647 kB | 7.2 kB | 8.6/30 kBProgress (5): 103/473 kB | 98/328 kB | 94/647 kB | 7.2 kB | 8.6/30 kBProgress (5): 108/473 kB | 98/328 kB | 94/647 kB | 7.2 kB | 8.6/30 kBProgress (5): 108/473 kB | 98/328 kB | 94/647 kB | 7.2 kB | 10.0/30 kBProgress (5): 108/473 kB | 98/328 kB | 94/647 kB | 7.2 kB | 11/30 kB  Progress (5): 112/473 kB | 98/328 kB | 94/647 kB | 7.2 kB | 11/30 kBProgress (5): 112/473 kB | 98/328 kB | 94/647 kB | 7.2 kB | 13/30 kBProgress (5): 112/473 kB | 98/328 kB | 94/647 kB | 7.2 kB | 14/30 kBProgress (5): 112/473 kB | 98/328 kB | 94/647 kB | 7.2 kB | 15/30 kBProgress (5): 112/473 kB | 98/328 kB | 94/647 kB | 7.2 kB | 17/30 kBProgress (5): 112/473 kB | 98/328 kB | 94/647 kB | 7.2 kB | 18/30 kBProgress (5): 112/473 kB | 98/328 kB | 94/647 kB | 7.2 kB | 20/30 kBProgress (5): 112/473 kB | 98/328 kB | 94/647 kB | 7.2 kB | 21/30 kBProgress (5): 112/473 kB | 98/328 kB | 94/647 kB | 7.2 kB | 22/30 kBProgress (5): 112/473 kB | 98/328 kB | 94/647 kB | 7.2 kB | 24/30 kBProgress (5): 112/473 kB | 98/328 kB | 94/647 kB | 7.2 kB | 25/30 kBProgress (5): 112/473 kB | 102/328 kB | 94/647 kB | 7.2 kB | 25/30 kBProgress (5): 116/473 kB | 102/328 kB | 94/647 kB | 7.2 kB | 25/30 kBProgress (5): 116/473 kB | 102/328 kB | 94/647 kB | 7.2 kB | 26/30 kBProgress (5): 116/473 kB | 102/328 kB | 94/647 kB | 7.2 kB | 28/30 kBProgress (5): 116/473 kB | 102/328 kB | 94/647 kB | 7.2 kB | 29/30 kBProgress (5): 116/473 kB | 102/328 kB | 94/647 kB | 7.2 kB | 30 kB   Progress (5): 120/473 kB | 102/328 kB | 94/647 kB | 7.2 kB | 30 kBProgress (5): 122/473 kB | 102/328 kB | 94/647 kB | 7.2 kB | 30 kBProgress (5): 127/473 kB | 102/328 kB | 94/647 kB | 7.2 kB | 30 kBProgress (5): 131/473 kB | 102/328 kB | 94/647 kB | 7.2 kB | 30 kBProgress (5): 135/473 kB | 102/328 kB | 94/647 kB | 7.2 kB | 30 kBProgress (5): 139/473 kB | 102/328 kB | 94/647 kB | 7.2 kB | 30 kBProgress (5): 144/473 kB | 102/328 kB | 94/647 kB | 7.2 kB | 30 kBProgress (5): 148/473 kB | 102/328 kB | 94/647 kB | 7.2 kB | 30 kBProgress (5): 152/473 kB | 102/328 kB | 94/647 kB | 7.2 kB | 30 kBProgress (5): 156/473 kB | 102/328 kB | 94/647 kB | 7.2 kB | 30 kB                                                                  Downloaded from central: https://repo.maven.apache.org/maven2/xmlpull/xmlpull/1.1.3.1/xmlpull-1.1.3.1.jar (7.2 kB at 40 kB/s)
+Progress (4): 160/473 kB | 102/328 kB | 94/647 kB | 30 kBProgress (4): 165/473 kB | 102/328 kB | 94/647 kB | 30 kBProgress (4): 169/473 kB | 102/328 kB | 94/647 kB | 30 kBProgress (4): 169/473 kB | 106/328 kB | 94/647 kB | 30 kB                                                         Downloaded from central: https://repo.maven.apache.org/maven2/io/github/x-stream/mxparser/1.2.2/mxparser-1.2.2.jar (30 kB at 163 kB/s)
+Progress (3): 169/473 kB | 110/328 kB | 94/647 kBProgress (3): 169/473 kB | 114/328 kB | 94/647 kBProgress (3): 169/473 kB | 114/328 kB | 98/647 kBProgress (3): 169/473 kB | 119/328 kB | 98/647 kBProgress (3): 169/473 kB | 119/328 kB | 103/647 kBProgress (3): 169/473 kB | 123/328 kB | 103/647 kBProgress (3): 169/473 kB | 127/328 kB | 103/647 kBProgress (3): 169/473 kB | 131/328 kB | 103/647 kBProgress (3): 169/473 kB | 134/328 kB | 103/647 kBProgress (3): 169/473 kB | 134/328 kB | 107/647 kBProgress (3): 169/473 kB | 134/328 kB | 111/647 kBProgress (3): 169/473 kB | 138/328 kB | 111/647 kBProgress (3): 169/473 kB | 138/328 kB | 115/647 kBProgress (3): 169/473 kB | 138/328 kB | 120/647 kBProgress (3): 169/473 kB | 138/328 kB | 124/647 kBProgress (3): 169/473 kB | 138/328 kB | 128/647 kBProgress (3): 169/473 kB | 138/328 kB | 130/647 kBProgress (3): 169/473 kB | 138/328 kB | 134/647 kBProgress (3): 169/473 kB | 138/328 kB | 139/647 kBProgress (3): 169/473 kB | 138/328 kB | 143/647 kBProgress (3): 169/473 kB | 138/328 kB | 147/647 kBProgress (3): 169/473 kB | 138/328 kB | 151/647 kBProgress (3): 169/473 kB | 138/328 kB | 156/647 kBProgress (3): 169/473 kB | 138/328 kB | 160/647 kBProgress (3): 169/473 kB | 138/328 kB | 176/647 kBProgress (3): 169/473 kB | 138/328 kB | 193/647 kBProgress (3): 169/473 kB | 138/328 kB | 209/647 kBProgress (3): 173/473 kB | 138/328 kB | 209/647 kBProgress (3): 173/473 kB | 138/328 kB | 225/647 kBProgress (3): 177/473 kB | 138/328 kB | 225/647 kBProgress (3): 182/473 kB | 138/328 kB | 225/647 kBProgress (3): 182/473 kB | 143/328 kB | 225/647 kBProgress (3): 186/473 kB | 143/328 kB | 225/647 kBProgress (3): 186/473 kB | 147/328 kB | 225/647 kBProgress (3): 190/473 kB | 147/328 kB | 225/647 kBProgress (3): 190/473 kB | 151/328 kB | 225/647 kBProgress (3): 190/473 kB | 155/328 kB | 225/647 kBProgress (3): 190/473 kB | 160/328 kB | 225/647 kBProgress (3): 190/473 kB | 164/328 kB | 225/647 kBProgress (3): 190/473 kB | 168/328 kB | 225/647 kBProgress (3): 194/473 kB | 168/328 kB | 225/647 kBProgress (3): 194/473 kB | 172/328 kB | 225/647 kBProgress (3): 199/473 kB | 172/328 kB | 225/647 kBProgress (3): 199/473 kB | 177/328 kB | 225/647 kBProgress (3): 203/473 kB | 177/328 kB | 225/647 kBProgress (3): 207/473 kB | 177/328 kB | 225/647 kBProgress (3): 211/473 kB | 177/328 kB | 225/647 kBProgress (3): 215/473 kB | 177/328 kB | 225/647 kBProgress (3): 232/473 kB | 177/328 kB | 225/647 kBProgress (3): 248/473 kB | 177/328 kB | 225/647 kBProgress (3): 253/473 kB | 177/328 kB | 225/647 kBProgress (3): 270/473 kB | 177/328 kB | 225/647 kBProgress (3): 286/473 kB | 177/328 kB | 225/647 kBProgress (3): 286/473 kB | 181/328 kB | 225/647 kBProgress (3): 286/473 kB | 185/328 kB | 225/647 kBProgress (3): 286/473 kB | 189/328 kB | 225/647 kBProgress (3): 286/473 kB | 193/328 kB | 225/647 kBProgress (3): 286/473 kB | 198/328 kB | 225/647 kBProgress (3): 286/473 kB | 200/328 kB | 225/647 kBProgress (3): 286/473 kB | 204/328 kB | 225/647 kBProgress (3): 286/473 kB | 220/328 kB | 225/647 kBProgress (3): 286/473 kB | 237/328 kB | 225/647 kBProgress (3): 286/473 kB | 253/328 kB | 225/647 kBProgress (3): 286/473 kB | 270/328 kB | 225/647 kBProgress (3): 286/473 kB | 270/328 kB | 242/647 kBProgress (3): 286/473 kB | 270/328 kB | 258/647 kBProgress (3): 303/473 kB | 270/328 kB | 258/647 kBProgress (3): 303/473 kB | 270/328 kB | 261/647 kBProgress (3): 303/473 kB | 270/328 kB | 278/647 kBProgress (3): 319/473 kB | 270/328 kB | 278/647 kBProgress (3): 319/473 kB | 270/328 kB | 294/647 kBProgress (3): 335/473 kB | 270/328 kB | 294/647 kBProgress (3): 335/473 kB | 286/328 kB | 294/647 kBProgress (3): 352/473 kB | 286/328 kB | 294/647 kBProgress (3): 368/473 kB | 286/328 kB | 294/647 kBProgress (3): 368/473 kB | 286/328 kB | 310/647 kBProgress (3): 385/473 kB | 286/328 kB | 310/647 kBProgress (3): 401/473 kB | 286/328 kB | 310/647 kBProgress (3): 401/473 kB | 302/328 kB | 310/647 kBProgress (3): 417/473 kB | 302/328 kB | 310/647 kBProgress (3): 434/473 kB | 302/328 kB | 310/647 kBProgress (3): 434/473 kB | 319/328 kB | 310/647 kBProgress (3): 434/473 kB | 328 kB | 310/647 kB    Progress (3): 450/473 kB | 328 kB | 310/647 kBProgress (3): 450/473 kB | 328 kB | 327/647 kBProgress (3): 466/473 kB | 328 kB | 327/647 kBProgress (3): 473 kB | 328 kB | 327/647 kB    Progress (3): 473 kB | 328 kB | 343/647 kBProgress (3): 473 kB | 328 kB | 360/647 kBProgress (3): 473 kB | 328 kB | 376/647 kBProgress (3): 473 kB | 328 kB | 392/647 kBProgress (3): 473 kB | 328 kB | 409/647 kBProgress (3): 473 kB | 328 kB | 425/647 kBProgress (3): 473 kB | 328 kB | 441/647 kBProgress (3): 473 kB | 328 kB | 458/647 kBProgress (3): 473 kB | 328 kB | 474/647 kBProgress (3): 473 kB | 328 kB | 491/647 kBProgress (3): 473 kB | 328 kB | 507/647 kBProgress (3): 473 kB | 328 kB | 523/647 kBProgress (3): 473 kB | 328 kB | 540/647 kBProgress (3): 473 kB | 328 kB | 556/647 kB                                          Downloaded from central: https://repo.maven.apache.org/maven2/org/jdom/jdom2/2.0.6.1/jdom2-2.0.6.1.jar (328 kB at 1.3 MB/s)
+Downloaded from central: https://repo.maven.apache.org/maven2/org/jsoup/jsoup/1.19.1/jsoup-1.19.1.jar (473 kB at 1.8 MB/s)
+Progress (1): 573/647 kBProgress (1): 589/647 kBProgress (1): 605/647 kBProgress (1): 622/647 kBProgress (1): 638/647 kBProgress (1): 647 kB                        Downloaded from central: https://repo.maven.apache.org/maven2/com/thoughtworks/xstream/xstream/1.4.21/xstream-1.4.21.jar (647 kB at 2.2 MB/s)
+[INFO] 
+Effective POMs, after inheritance, interpolation, and profiles are applied:
+
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ====================================================================== -->
+<!--                                                                        -->
+<!-- Generated by Maven Help Plugin                                         -->
+<!-- See: https://maven.apache.org/plugins/maven-help-plugin/               -->
+<!--                                                                        -->
+<!-- ====================================================================== -->
+<!-- ====================================================================== -->
+<!--                                                                        -->
+<!-- Effective POM for project 'freecol.testcft:freecol-cft:jar:1.0'        -->
+<!--                                                                        -->
+<!-- ====================================================================== -->
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>freecol.testcft</groupId>
+  <artifactId>freecol-cft</artifactId>
+  <version>1.0</version>
+  <properties>
+    <argLine />
+    <asm.version>9.7</asm.version>
+    <jacoco.version>0.8.12</jacoco.version>
+    <junit.version>4.13.2</junit.version>
+    <maven.compiler.release>11</maven.compiler.release>
+    <project.build.outputTimestamp>1980-02-01T00:00:00Z</project.build.outputTimestamp>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+    <repo.root>D:\Code\freecol-clone\test_cft/..</repo.root>
+    <soot.version>4.5.0</soot.version>
+  </properties>
+  <dependencies>
+    <dependency>
+      <groupId>local</groupId>
+      <artifactId>commons-cli</artifactId>
+      <version>1.4</version>
+      <scope>system</scope>
+      <systemPath>D:\Code\freecol-clone\test_cft/../jars/commons-cli-1.4.jar</systemPath>
+    </dependency>
+    <dependency>
+      <groupId>local</groupId>
+      <artifactId>cortado</artifactId>
+      <version>0.6.0</version>
+      <scope>system</scope>
+      <systemPath>D:\Code\freecol-clone\test_cft/../jars/cortado-0.6.0.jar</systemPath>
+    </dependency>
+    <dependency>
+      <groupId>local</groupId>
+      <artifactId>findbugs-annotations</artifactId>
+      <version>1</version>
+      <scope>system</scope>
+      <systemPath>D:\Code\freecol-clone\test_cft/../jars/findbugs-annotations.jar</systemPath>
+    </dependency>
+    <dependency>
+      <groupId>local</groupId>
+      <artifactId>jogg</artifactId>
+      <version>0.0.17</version>
+      <scope>system</scope>
+      <systemPath>D:\Code\freecol-clone\test_cft/../jars/jogg-0.0.17.jar</systemPath>
+    </dependency>
+    <dependency>
+      <groupId>local</groupId>
+      <artifactId>jorbis</artifactId>
+      <version>0.0.17</version>
+      <scope>system</scope>
+      <systemPath>D:\Code\freecol-clone\test_cft/../jars/jorbis-0.0.17.jar</systemPath>
+    </dependency>
+    <dependency>
+      <groupId>local</groupId>
+      <artifactId>miglayout-core</artifactId>
+      <version>5.3</version>
+      <scope>system</scope>
+      <systemPath>D:\Code\freecol-clone\test_cft/../jars/miglayout-core-5.3.jar</systemPath>
+    </dependency>
+    <dependency>
+      <groupId>local</groupId>
+      <artifactId>miglayout-swing</artifactId>
+      <version>5.3</version>
+      <scope>system</scope>
+      <systemPath>D:\Code\freecol-clone\test_cft/../jars/miglayout-swing-5.3.jar</systemPath>
+    </dependency>
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>4.13.2</version>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.ow2.asm</groupId>
+      <artifactId>asm</artifactId>
+      <version>9.7</version>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.ow2.asm</groupId>
+      <artifactId>asm-tree</artifactId>
+      <version>9.7</version>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.ow2.asm</groupId>
+      <artifactId>asm-analysis</artifactId>
+      <version>9.7</version>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.ow2.asm</groupId>
+      <artifactId>asm-util</artifactId>
+      <version>9.7</version>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.soot-oss</groupId>
+      <artifactId>soot</artifactId>
+      <version>4.5.0</version>
+      <scope>test</scope>
+    </dependency>
+  </dependencies>
+  <repositories>
+    <repository>
+      <snapshots>
+        <enabled>false</enabled>
+      </snapshots>
+      <id>central</id>
+      <name>Central Repository</name>
+      <url>https://repo.maven.apache.org/maven2</url>
+    </repository>
+  </repositories>
+  <pluginRepositories>
+    <pluginRepository>
+      <snapshots>
+        <enabled>false</enabled>
+      </snapshots>
+      <id>central</id>
+      <name>Central Repository</name>
+      <url>https://repo.maven.apache.org/maven2</url>
+    </pluginRepository>
+  </pluginRepositories>
+  <build>
+    <sourceDirectory>D:\Code\freecol-clone\test_cft\..\src</sourceDirectory>
+    <scriptSourceDirectory>D:\Code\freecol-clone\test_cft\src\main\scripts</scriptSourceDirectory>
+    <testSourceDirectory>D:\Code\freecol-clone\test_cft\src\test\java</testSourceDirectory>
+    <outputDirectory>D:\Code\freecol-clone\test_cft\target\classes</outputDirectory>
+    <testOutputDirectory>D:\Code\freecol-clone\test_cft\target\test-classes</testOutputDirectory>
+    <resources>
+      <resource>
+        <directory>D:\Code\freecol-clone\test_cft\src\main\resources</directory>
+      </resource>
+    </resources>
+    <testResources>
+      <testResource>
+        <directory>D:\Code\freecol-clone\test_cft\src\test\resources</directory>
+      </testResource>
+    </testResources>
+    <directory>D:\Code\freecol-clone\test_cft\target</directory>
+    <finalName>freecol-cft-1.0</finalName>
+    <plugins>
+      <plugin>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <version>3.13.0</version>
+        <executions>
+          <execution>
+            <id>default-compile</id>
+            <phase>compile</phase>
+            <goals>
+              <goal>compile</goal>
+            </goals>
+            <configuration>
+              <release>11</release>
+              <debug>true</debug>
+              <debuglevel>lines,vars,source</debuglevel>
+            </configuration>
+          </execution>
+          <execution>
+            <id>default-testCompile</id>
+            <phase>test-compile</phase>
+            <goals>
+              <goal>testCompile</goal>
+            </goals>
+            <configuration>
+              <release>11</release>
+              <debug>true</debug>
+              <debuglevel>lines,vars,source</debuglevel>
+            </configuration>
+          </execution>
+        </executions>
+        <configuration>
+          <release>11</release>
+          <debug>true</debug>
+          <debuglevel>lines,vars,source</debuglevel>
+        </configuration>
+      </plugin>
+      <plugin>
+        <groupId>org.codehaus.mojo</groupId>
+        <artifactId>build-helper-maven-plugin</artifactId>
+        <version>3.5.0</version>
+        <executions>
+          <execution>
+            <id>add-tools-source</id>
+            <phase>generate-test-sources</phase>
+            <goals>
+              <goal>add-test-source</goal>
+            </goals>
+            <configuration>
+              <sources>
+                <source>D:\Code\freecol-clone\test_cft/src/tools/java</source>
+              </sources>
+            </configuration>
+          </execution>
+        </executions>
+      </plugin>
+      <plugin>
+        <groupId>org.jacoco</groupId>
+        <artifactId>jacoco-maven-plugin</artifactId>
+        <version>0.8.12</version>
+        <executions>
+          <execution>
+            <id>agent</id>
+            <goals>
+              <goal>prepare-agent</goal>
+            </goals>
+            <configuration>
+              <includes>
+                <include>net/sf/freecol/**</include>
+              </includes>
+            </configuration>
+          </execution>
+          <execution>
+            <id>report</id>
+            <phase>verify</phase>
+            <goals>
+              <goal>report</goal>
+            </goals>
+            <configuration>
+              <outputDirectory>D:\Code\freecol-clone\test_cft/reports/jacoco</outputDirectory>
+              <includes>
+                <include>net/sf/freecol/FreeCol*.class</include>
+                <include>net/sf/freecol/client/control/**</include>
+                <include>net/sf/freecol/common/model/**</include>
+                <include>net/sf/freecol/common/util/**</include>
+                <include>net/sf/freecol/server/ai/**</include>
+                <include>net/sf/freecol/server/control/**</include>
+                <include>net/sf/freecol/server/model/**</include>
+              </includes>
+            </configuration>
+          </execution>
+        </executions>
+        <configuration>
+          <includes>
+            <include>net/sf/freecol/**</include>
+          </includes>
+        </configuration>
+      </plugin>
+      <plugin>
+        <artifactId>maven-surefire-plugin</artifactId>
+        <version>3.2.5</version>
+        <executions>
+          <execution>
+            <id>default-test</id>
+            <phase>test</phase>
+            <goals>
+              <goal>test</goal>
+            </goals>
+            <configuration>
+              <workingDirectory>D:\Code\freecol-clone\test_cft/..</workingDirectory>
+              <argLine>@{argLine} -Djava.awt.headless=true</argLine>
+              <includes>
+                <include>**/*CfgTest.java</include>
+              </includes>
+              <reportsDirectory>D:\Code\freecol-clone\test_cft/reports/surefire</reportsDirectory>
+            </configuration>
+          </execution>
+        </executions>
+        <configuration>
+          <workingDirectory>D:\Code\freecol-clone\test_cft/..</workingDirectory>
+          <argLine>@{argLine} -Djava.awt.headless=true</argLine>
+          <includes>
+            <include>**/*CfgTest.java</include>
+          </includes>
+          <reportsDirectory>D:\Code\freecol-clone\test_cft/reports/surefire</reportsDirectory>
+        </configuration>
+      </plugin>
+      <plugin>
+        <artifactId>maven-clean-plugin</artifactId>
+        <version>3.5.0</version>
+        <executions>
+          <execution>
+            <id>default-clean</id>
+            <phase>clean</phase>
+            <goals>
+              <goal>clean</goal>
+            </goals>
+          </execution>
+        </executions>
+      </plugin>
+      <plugin>
+        <artifactId>maven-resources-plugin</artifactId>
+        <version>3.5.0</version>
+        <executions>
+          <execution>
+            <id>default-testResources</id>
+            <phase>process-test-resources</phase>
+            <goals>
+              <goal>testResources</goal>
+            </goals>
+          </execution>
+          <execution>
+            <id>default-resources</id>
+            <phase>process-resources</phase>
+            <goals>
+              <goal>resources</goal>
+            </goals>
+          </execution>
+        </executions>
+      </plugin>
+      <plugin>
+        <artifactId>maven-jar-plugin</artifactId>
+        <version>3.5.1</version>
+        <executions>
+          <execution>
+            <id>default-jar</id>
+            <phase>package</phase>
+            <goals>
+              <goal>jar</goal>
+            </goals>
+          </execution>
+        </executions>
+      </plugin>
+      <plugin>
+        <artifactId>maven-install-plugin</artifactId>
+        <version>3.2.0</version>
+        <executions>
+          <execution>
+            <id>default-install</id>
+            <phase>install</phase>
+            <goals>
+              <goal>install</goal>
+            </goals>
+          </execution>
+        </executions>
+      </plugin>
+      <plugin>
+        <artifactId>maven-deploy-plugin</artifactId>
+        <version>3.2.0</version>
+        <executions>
+          <execution>
+            <id>default-deploy</id>
+            <phase>deploy</phase>
+            <goals>
+              <goal>deploy</goal>
+            </goals>
+          </execution>
+        </executions>
+      </plugin>
+      <plugin>
+        <artifactId>maven-site-plugin</artifactId>
+        <version>3.22.0</version>
+        <executions>
+          <execution>
+            <id>default-site</id>
+            <phase>site</phase>
+            <goals>
+              <goal>site</goal>
+            </goals>
+            <configuration>
+              <outputDirectory>D:\Code\freecol-clone\test_cft\target\site</outputDirectory>
+              <reportPlugins>
+                <reportPlugin>
+                  <groupId>org.apache.maven.plugins</groupId>
+                  <artifactId>maven-project-info-reports-plugin</artifactId>
+                </reportPlugin>
+              </reportPlugins>
+            </configuration>
+          </execution>
+          <execution>
+            <id>default-deploy</id>
+            <phase>site-deploy</phase>
+            <goals>
+              <goal>deploy</goal>
+            </goals>
+            <configuration>
+              <outputDirectory>D:\Code\freecol-clone\test_cft\target\site</outputDirectory>
+              <reportPlugins>
+                <reportPlugin>
+                  <groupId>org.apache.maven.plugins</groupId>
+                  <artifactId>maven-project-info-reports-plugin</artifactId>
+                </reportPlugin>
+              </reportPlugins>
+            </configuration>
+          </execution>
+        </executions>
+        <configuration>
+          <outputDirectory>D:\Code\freecol-clone\test_cft\target\site</outputDirectory>
+          <reportPlugins>
+            <reportPlugin>
+              <groupId>org.apache.maven.plugins</groupId>
+              <artifactId>maven-project-info-reports-plugin</artifactId>
+            </reportPlugin>
+          </reportPlugins>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
+  <reporting>
+    <outputDirectory>D:\Code\freecol-clone\test_cft\target\site</outputDirectory>
+  </reporting>
+</project>
+
+
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  3.606 s
+[INFO] Finished at: 2026-11-14T16:05:54+07:00
+[INFO] ------------------------------------------------------------------------

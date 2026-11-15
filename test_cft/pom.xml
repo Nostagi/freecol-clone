@@ -120,7 +120,7 @@
           <jvm>${surefire.jvm}</jvm>
           <!-- FreeCol resolves "data/..." and "test/data/..." relative to the repository root -->
           <workingDirectory>${repo.root}</workingDirectory>
-          <argLine>@{argLine} -Djava.awt.headless=true</argLine>
+          <argLine>@{argLine} -Djava.awt.headless=false</argLine>
           <includes><include>**/*CfgTest.java</include></includes>
           <reportsDirectory>${project.basedir}/reports/surefire</reportsDirectory>
         </configuration>
